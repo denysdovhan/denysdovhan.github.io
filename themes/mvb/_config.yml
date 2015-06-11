@@ -1,0 +1,24 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home: /
+  Archives: /archives
+
+# can include these pages on the front
+index_pages:
+- index
+- about
+- contact
+
+# feed
+atom: /atom.xml
+
+# Miscelaneous
+favicon: /favicon.png
+
+# loaded in the head
+stylesheets:
+- /css/style.css
