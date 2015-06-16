@@ -10,29 +10,27 @@
 doctype html
 html(lang=config.language)
   head
-    meta(charset='UTF-8')
     title= pageTitle
-    each url in theme.stylesheets
-      link(rel='stylesheet', href=url)
+
+    meta(charset='UTF-8')
+
     link(rel="icon", href=config.root + 'img/favicon.png')
+
+    !=css('styles/style.css')
   body
-    #menu-outer
-      nav#menu-inner
-        each url, label in theme.menu
-          a(href=url)= label
-    #content-outer
-      #content-inner
-        if body
-          div!= body
-        else
-          block content
-    #bottom-outer
-      #bottom-inner
-        span Site construction by
-        span= ' ' + config.author + ' '
-        span using
-        a(href='http://hexo.io')
-          span hexo blog framework
-        span .
-        br
-        a(href=config.root) Home
+
+    //- Menu goes here
+    each url, label in theme.menu
+      a(href=url)= label
+
+    //- Content goes here
+    if body
+      div!= body
+    else
+      block content
+
+    //- Bottom goes here
+    span Site construction by
+    span= ' ' + config.author + '.'
+    br
+    a(href=config.root) Home
