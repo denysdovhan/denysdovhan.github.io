@@ -12,8 +12,4 @@ html(lang=config.language)
     .wrap
       block content
 
-    //- Bottom goes here
-    span Site construction by
-    span= ' ' + config.author + '.'
-    br
-    a(href=config.root) Home
+    include partial/footer
