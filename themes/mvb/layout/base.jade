@@ -4,7 +4,7 @@ html(lang=config.language)
     include partial/head
   body
     .wrap
-      h1 Hi, guys!
+      h1=config.title
 
       //- Menu goes here
       each url, label in theme.menu
