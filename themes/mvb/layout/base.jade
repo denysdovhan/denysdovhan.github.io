@@ -1,22 +1,7 @@
-
-- var pageTitle = page.title || config.subtitle || ''
-- if (is_archive()) pageTitle = 'Archives'
-- if (is_tag()) pageTitle = 'Tag: ' + page.tag
-- if (is_category()) pageTitle = 'Category: ' + page.category
-- if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
-- if (is_year()) pageTitle += ': ' + page.year
-- pageTitle += ' [ ' + config.title + ' ]'
-
 doctype html
 html(lang=config.language)
   head
-    title= pageTitle
-
-    meta(charset='UTF-8')
-
-    link(rel="icon", href=config.root + 'img/favicon.png')
-
-    !=css('styles/style.css')
+    include partial/head
   body
 
     //- Menu goes here
