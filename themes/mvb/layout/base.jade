@@ -3,13 +3,14 @@ html(lang=config.language)
   head
     include partial/head
   body
-
-    //- Menu goes here
-    each url, label in theme.menu
-      a(href=url)= label
-
-    //- Content goes here
     .wrap
+      h1 Hi, guys!
+
+      //- Menu goes here
+      each url, label in theme.menu
+        a(href=url)= label
+
+      //- Content goes here
       block content
 
-    include partial/footer
+      include partial/footer
