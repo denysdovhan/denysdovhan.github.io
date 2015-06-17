@@ -1,7 +1,7 @@
-extends includes/layout
+extends base
 
 block content
   article#page
     h1= page.title
     != page.content
-  include includes/pagination
+  include partial/pagination

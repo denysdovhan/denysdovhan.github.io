@@ -1,7 +1,8 @@
-extends includes/layout
+extends base
 
 block content
-  include includes/recent-posts
+  h1 Heading
+  include partial/recent-posts
 
   //- each index_page in theme.index_pages
     //- each pg in site.pages.toArray()
@@ -9,4 +10,4 @@ block content
         //- h1= pg.title
         //- div!= pg.content
 
-  include includes/pagination
+  include partial/pagination

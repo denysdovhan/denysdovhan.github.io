@@ -24,9 +24,7 @@ html(lang=config.language)
       a(href=url)= label
 
     //- Content goes here
-    if body
-      div!= body
-    else
+    .wrap
       block content
 
     //- Bottom goes here

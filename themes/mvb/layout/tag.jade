@@ -1,4 +1,4 @@
-extends includes/layout
+extends base
 
 block content
   div#tag
@@ -13,4 +13,4 @@ block content
         time(datetime=date_xml(article.date))= date(article.date)
       br.clear
     - })
-  include includes/pagination
+  include partial/pagination
