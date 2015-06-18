@@ -8,9 +8,10 @@ block content
           li.list__item
             a(href=post.path)= post.title
             time(datetime=post.date.toJSON())= date(post.date, date_format)
-            if post.excerpt
-              p.list__item-desc= page.excerpt.replace(/\<[^\>]+\>/g, '')
-            else
-              p.list__item-desc= post.content.replace(/\<[^\>]+\>/g, '').substring(0,200) + '…'
+            p.list__item-desc
+              if post.excerpt
+                = page.excerpt.replace(/\<[^\>]+\>/g, '')
+              else
+                = post.content.replace(/\<[^\>]+\>/g, '').substring(0,200) + '…'
 
   include partial/pagination
