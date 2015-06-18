@@ -8,7 +8,6 @@ html, body
   line-height 1.5
 
 h1, h2, h3, h4, h5, h6
-  font-family sans-serif
   line-height 1
   font-weight normal
 
@@ -39,10 +38,21 @@ a
 .list__item
   @extend .list
 
+  a
+    font-size 1.5em
+
   time
+    font-family serif
     font-style italic
+    font-size .7em
+    &:before
+      content '–'
+      margin 0 .5em 0
 
   & + .list__item
     margin-top 1em
+
+  p&-desc
+    font-size .8em
 
 

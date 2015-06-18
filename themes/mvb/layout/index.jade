@@ -7,7 +7,10 @@ block content
         each post in site.posts.sort('date', -1).limit(5).toArray()
           li.list__item
             a(href=post.path)= post.title
-            if post.date
-              time(datetime=post.date.toJSON())= date(post.date, date_format)
+            time(datetime=post.date.toJSON())= date(post.date, date_format)
+            if post.excerpt
+              p.list__item-desc= page.excerpt.replace(/\<[^\>]+\>/g, '')
+            else
+              p.list__item-desc= post.content.replace(/\<[^\>]+\>/g, '').substring(0,200) + '…'
 
   include partial/pagination
