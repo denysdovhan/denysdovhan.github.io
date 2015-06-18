@@ -1,5 +1,5 @@
-font-family = Georgia, Cambria, 'Times New Roman', Times, serif
-font-size = 1.4em
+base-font-family = Georgia, Cambria, 'Times New Roman', Times, serif
+base-font-size = 1.4em
 
 html, body
   -webkit-font-smoothing antialiased
@@ -9,7 +9,6 @@ html, body
 
 h1, h2, h3, h4, h5, h6
   line-height 1
-  font-weight normal
 
 a
   color inherit
@@ -18,16 +17,34 @@ a
   &:hover
     border-bottom-style solid
 
+article
+  img
+    display block
+    max-width 100%
+    margin 0 auto
+    border-radius 3px
+
+  blockquote
+    margin 0
+    padding-left 1em
+    border-left 3px solid #ccc
+
+    p a:last-of-type
+      font-style italic
+      font-size 0.8em
+      &::before
+        content '—'
+
 .wrap
-  font-size font-size
-  font-family font-family
+  font-size base-font-size
+  font-family base-font-family
   color #333
   max-width 30em
   margin 3em auto 7em
   @media (max-device-width: 480px)
-    font-size: .8em
+    font-size .8em
     @media (orientation: landscape)
-      font-size: .6em
+      font-size .6em
 
 .list
   margin 0
