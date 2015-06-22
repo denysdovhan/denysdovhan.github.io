@@ -1,0 +1,93 @@
+
+$code-block
+  background highlight-color
+  border solid base-lines-color
+  border-width 3px 0
+
+.highlight
+  @extend $code-block
+  overflow-y auto
+  color highlight-foreground
+  padding 0 .5em
+  margin 0
+  vertical-align baseline
+  .line
+    height 1em
+    font-family monospace
+  pre
+    border none
+    margin 1em 0
+    padding 0
+  table
+    margin 0
+    width auto
+  td
+    border none
+    padding 0
+  figcaption
+    clearfix
+    font-size 0.85em
+    color highlight-comment
+    line-height 1em
+    margin-bottom 1em
+    a
+      float right
+  .gutter pre
+    color highlight-line-numbers
+    text-align right
+    padding-right .5em
+
+.gist
+  @extend $code-block
+  .gist-file
+    margin 1em 0
+
+pre
+  .comment
+  .title
+    color highlight-comment
+  .varivables
+  .attribute
+  .tag
+  .regexp
+  .ruby .constant
+  .xml .tag .title
+  .xml .pi
+  .xml .doctype
+  .html .doctype
+  .css .id
+  .css .class
+  .css .pseudo
+    color highlight-red
+  .number
+  .preprocessor
+  .built_in
+  .literal
+  .params
+  .constant
+    color highlight-orange
+  .class
+  .ruby .class .title
+  .css .rules .attribute
+    color highlight-green
+  .string
+  .value
+  .iheritance
+  .header
+  .ruby .symbol
+  .xml .cdata
+    color highlight-green
+  .css .hexcolor
+    color highlight-aqua
+  .function
+  .python .decorator
+  .python .title
+  .ruby .function .title
+  .ruby .title .keyword
+  .perl .sub
+  .javascript .title
+  .coffescript .title
+    color highlight-blue
+  .keyword
+  .javascript .function
+    color highlight-purple
