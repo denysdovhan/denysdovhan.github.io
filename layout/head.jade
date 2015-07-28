@@ -1,0 +1,21 @@
+//- Meta
+meta(charset='UTF-8')
+//- if config.author
+  //- meta(name='author', content=config.author)
+//- if config.description
+  //- meta(name='author', content=config.description)
+meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+//- Title
+title
+  if title
+    = title
+  else
+    = 'Blog'
+
+//- Favicon
+//- if theme.favicon
+  //- link(rel="icon", href=(config.root + theme.favicon))
+
+//- Styles
+//- !=css('styles/main.css')
