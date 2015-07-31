@@ -17,3 +17,10 @@ gulp.task('posts', function () {
       .pipe(marked())
       .pipe(gulp.dest('dist'));
 });
+
+
+gulp.task('styles', function () {
+  return gulp.src(['styles/*','!styles/_*'])
+      .pipe(stylus())
+      .pipe(gulp.dest('dist/styles'));
+});
