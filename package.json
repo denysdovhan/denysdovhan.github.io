@@ -14,10 +14,13 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "each-done": "^1.0.0",
     "gulp": "^3.9.0",
+    "gulp-data": "^1.2.0",
     "gulp-front-matter": "^1.2.3",
     "gulp-jade": "^1.2.3",
     "gulp-marked": "^1.0.0",
+    "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.5",
     "through2": "^2.0.0"
   }
