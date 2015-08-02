@@ -6,6 +6,7 @@ var gulp        = require('gulp'),
     marked      = require('gulp-marked'),
     rename      = require('gulp-rename'),
     stylus      = require('gulp-stylus'),
+    del         = require('del'),
     frontMatter = require('gulp-front-matter'),
     through     = require('through2'),
     each        = require('each-done'),
@@ -43,7 +44,7 @@ gulp.task('collect', function () {
 });
 
 // Render all posts
-gulp.task('render', ['collect'], function (done) {
+gulp.task('render', ['clean', 'collect'], function (done) {
   each(posts, function (post) {
     return gulp.src('layout/post.jade')
       .pipe(data(post))
@@ -58,4 +59,9 @@ gulp.task('styles', function () {
   return gulp.src(['styles/*','!styles/_*'])
       .pipe(stylus())
       .pipe(gulp.dest('dist/styles'));
+});
+
+// Clean dist
+gulp.task('clean', function (cb) {
+  del(['dist'], cb);
 });

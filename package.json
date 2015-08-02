@@ -14,6 +14,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "del": "^1.2.0",
     "each-done": "^1.0.0",
     "gulp": "^3.9.0",
     "gulp-data": "^1.2.0",
