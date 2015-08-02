@@ -61,6 +61,14 @@ gulp.task('styles', function () {
       .pipe(gulp.dest('dist/styles'));
 });
 
+// Render index page
+gulp.task('index', ['collect'], function () {
+  return gulp.src('layout/index.jade')
+    .pipe(data({ posts: posts }))
+    .pipe(jade({ pretty: true }))
+    .pipe(gulp.dest('dist'));
+});
+
 // Clean dist
 gulp.task('clean', function (cb) {
   del(['dist'], cb);
