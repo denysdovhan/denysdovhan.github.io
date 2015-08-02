@@ -55,7 +55,7 @@ gulp.task('render', ['collect'], function (done) {
 
 // Render styles
 gulp.task('styles', function () {
-  return gulp.src(['styles/*','!jstyles/_*'])
+  return gulp.src(['styles/*','!styles/_*'])
       .pipe(stylus())
       .pipe(gulp.dest('dist/styles'));
 });
