@@ -1,5 +1,6 @@
 extend layout
 
 block content
-  each post in collections.posts
+  each post in posts
     h1!= post.title
+    p!= post.summary

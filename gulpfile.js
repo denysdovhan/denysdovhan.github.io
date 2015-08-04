@@ -17,6 +17,18 @@ var site = require('./package.json').site;
 
 // Array of posts
 var posts = [];
+
+// Get summary
+function summarize(marker) {
+  return through.obj(function (file, enc, cb) {
+    // get file's part before marker
+    file.data.summary = file.contents.toString().split(marker)[0];
+    this.push(file);
+    cb();
+  });
+}
+
+// Function that collects all posts
 function collect() {
   return through.obj(function (file, enc, cb) {
     // get url and content from file
@@ -41,6 +53,7 @@ gulp.task('collect', function () {
   return gulp.src('posts/*.md')
       .pipe(frontMatter({ property: 'data', remove: true }))
       .pipe(marked())
+      .pipe(summarize('<!-- more -->'))
       .pipe(collect());
 });
 
