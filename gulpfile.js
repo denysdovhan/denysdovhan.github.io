@@ -58,7 +58,7 @@ gulp.task('collect', function () {
 });
 
 // Render all posts
-gulp.task('posts', ['clean', 'collect'], function (done) {
+gulp.task('posts', ['collect'], function (done) {
   each(posts, function (post) {
     return gulp.src('layout/post.jade')
       .pipe(data(post))
@@ -69,14 +69,14 @@ gulp.task('posts', ['clean', 'collect'], function (done) {
 });
 
 // Render styles
-gulp.task('styles', ['clean'], function () {
+gulp.task('styles', function () {
   return gulp.src(['styles/*','!styles/_*'])
       .pipe(stylus())
       .pipe(gulp.dest('dist/styles'));
 });
 
 // Render index page
-gulp.task('index', ['clean', 'collect'], function () {
+gulp.task('index', ['collect'], function () {
   return gulp.src('layout/index.jade')
     .pipe(data({ site: site, posts: posts }))
     .pipe(jade({ pretty: true }))
@@ -88,5 +88,8 @@ gulp.task('clean', function (cb) {
   del(['dist'], cb);
 });
 
+// Build task
+gulp.task('build', ['posts', 'index', 'styles']);
+
 // Default task
-gulp.task('default', ['clean', 'styles', 'posts', 'index']);
+gulp.task('default', ['build']);
