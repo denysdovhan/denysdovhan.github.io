@@ -116,7 +116,7 @@ gulp.task('clean', function (cb) {
 });
 
 // Build task
-gulp.task('build', ['posts', 'index', 'styles']);
+gulp.task('build', ['posts', 'index', 'rss', 'styles']);
 
 // Watch task
 gulp.task('watch', ['build'], function () {
