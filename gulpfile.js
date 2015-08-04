@@ -12,17 +12,18 @@ var gulp        = require('gulp'),
     each        = require('each-done'),
     path        = require('path');
 
+// Site meta data
+var site = require('./package.json').site;
 
+// Array of posts
 var posts = [];
 function collect() {
   return through.obj(function (file, enc, cb) {
+    // get url and content from file
     file.data.url = path.basename(file.path, path.extname(file.path));
-
-    posts.push({
-      data: file.data,
-      content: file.contents.toString()
-    });
-
+    file.data.content = file.contents.toString();
+    // push into posts' array
+    posts.push(file.data);
     this.push(file);
     cb();
   },
@@ -49,7 +50,7 @@ gulp.task('render', ['clean', 'collect'], function (done) {
     return gulp.src('layout/post.jade')
       .pipe(data(post))
       .pipe(jade({ pretty: true }))
-      .pipe(rename({ dirname: post.data.url, basename: 'index' }))
+      .pipe(rename({ dirname: post.url, basename: 'index' }))
       .pipe(gulp.dest('dist'));
   }, done);
 });
@@ -64,7 +65,7 @@ gulp.task('styles', function () {
 // Render index page
 gulp.task('index', ['collect'], function () {
   return gulp.src('layout/index.jade')
-    .pipe(data({ posts: posts }))
+    .pipe(data({ site: site, posts: posts }))
     .pipe(jade({ pretty: true }))
     .pipe(gulp.dest('dist'));
 });

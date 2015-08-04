@@ -1,8 +1,12 @@
 {
   "name": "denysdovhan.github.io",
   "version": "0.0.0",
-  "description": "Blog from Denys Dovhan.",
-  "author": "Denys Dovhan <email@denysdovhan.com> (http://denysdovhan.com/)",
+  "description": "Blog from Denys Dovhan",
+  "author": {
+    "name": "Denys Dovhan",
+    "email": "email@denysdovhan.com",
+    "url": "denysdovhan.com"
+  },
   "main": "gulpfile.js",
   "private": true,
   "scripts": {
@@ -11,6 +15,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/denysdovhan/denysdovhan.github.io"
+  },
+  "site": {
+    "title": "Denys Dovhan",
+    "description": "Blog from Denys Dovhan"
   },
   "dependencies": {},
   "devDependencies": {
