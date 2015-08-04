@@ -1,16 +1,20 @@
 'use strict';
 
-var gulp        = require('gulp'),
-    jade        = require('gulp-jade'),
-    data        = require('gulp-data'),
-    marked      = require('gulp-marked'),
-    rename      = require('gulp-rename'),
-    stylus      = require('gulp-stylus'),
-    del         = require('del'),
-    frontMatter = require('gulp-front-matter'),
-    through     = require('through2'),
-    each        = require('each-done'),
-    path        = require('path');
+var gulp         = require('gulp'),
+    jade         = require('gulp-jade'),
+    data         = require('gulp-data'),
+    marked       = require('gulp-marked'),
+    rename       = require('gulp-rename'),
+    stylus       = require('gulp-stylus'),
+    frontMatter  = require('gulp-front-matter'),
+
+    del          = require('del'),
+    through      = require('through2'),
+    each         = require('each-done'),
+    path         = require('path'),
+
+    browserSync  = require('browser-sync'),
+    reload       = browserSync.reload;
 
 // Site meta data
 var site = require('./package.json').site;
@@ -91,5 +95,22 @@ gulp.task('clean', function (cb) {
 // Build task
 gulp.task('build', ['posts', 'index', 'styles']);
 
+// Watch task
+gulp.task('watch', ['build'], function () {
+  browserSync({
+    server: './dist',
+    notify: false,
+    debugInfo: false,
+    host: 'localhost'
+  });
+
+  // watch changes in styles, layout and posts
+  gulp.watch(['styles/**/*.{styl,stylus}'], ['styles']);
+  gulp.watch(['layout/**/*.jade', 'posts/*.md'], ['posts', 'index']);
+
+  // emmit reloading
+  gulp.watch('dist/**/*.{html,css}').on('change', reload);
+});
+
 // Default task
-gulp.task('default', ['build']);
+gulp.task('default', ['watch']);
