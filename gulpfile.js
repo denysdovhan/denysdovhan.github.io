@@ -8,7 +8,9 @@ var gulp         = require('gulp'),
     stylus       = require('gulp-stylus'),
     frontMatter  = require('gulp-front-matter'),
 
+    fs           = require('fs'),
     del          = require('del'),
+    rss          = require('rss'),
     through      = require('through2'),
     each         = require('each-done'),
     path         = require('path'),
@@ -85,6 +87,27 @@ gulp.task('index', ['collect'], function () {
     .pipe(data({ site: site, posts: posts }))
     .pipe(jade({ pretty: true }))
     .pipe(gulp.dest('dist'));
+});
+
+// Create RSS
+gulp.task('rss', ['collect'], function () {
+  var feed = new rss(site);
+
+  posts.forEach(function (post) {
+    feed.item({
+      title: post.title,
+      description: post.summary,
+      url: site.site_url + post.url,
+      author: site.author,
+      date: post.date
+    });
+  });
+
+  var xml = feed.xml({ indent: true });
+
+  fs.writeFile('dist/rss.xml', xml, { encoding: 'utf-8' }, function (err) {
+    if (err) { throw err; }
+  });
 });
 
 // Clean dist

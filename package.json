@@ -18,7 +18,15 @@
   },
   "site": {
     "title": "Denys Dovhan",
-    "description": "Blog from Denys Dovhan"
+    "description": "Blog from Denys Dovhan",
+    "author": "Denys Dovhan",
+    "feed_url": "http://denysdovhan.com/rss.xml",
+    "site_url": "http://denysdovhan.com/",
+    "managingEditor": "email@denysdovhan.com (Denys Dovhan)",
+    "webMaster": "email@denysdovhan.com (Denys Dovhan)",
+    "categories": [
+      "css", "frontend", "design", "js", "javascript"
+    ]
   },
   "dependencies": {},
   "devDependencies": {
@@ -32,6 +40,7 @@
     "gulp-marked": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.5",
+    "rss": "^1.1.1",
     "through2": "^2.0.0"
   }
 }
