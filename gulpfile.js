@@ -69,7 +69,7 @@ gulp.task('collect', function () {
 gulp.task('posts', ['collect'], function (done) {
   each(posts, function (post) {
     return gulp.src('layout/post.jade')
-      .pipe(data(post))
+      .pipe(data({ site: site, post: post }))
       .pipe(jade({ pretty: true }))
       .pipe(rename({ dirname: post.url, basename: 'index' }))
       .pipe(gulp.dest('dist'));
