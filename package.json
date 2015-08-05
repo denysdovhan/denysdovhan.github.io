@@ -25,7 +25,11 @@
     "managingEditor": "email@denysdovhan.com (Denys Dovhan)",
     "webMaster": "email@denysdovhan.com (Denys Dovhan)",
     "categories": [
-      "css", "frontend", "design", "js", "javascript"
+      "css",
+      "frontend",
+      "design",
+      "js",
+      "javascript"
     ]
   },
   "dependencies": {},
@@ -40,6 +44,7 @@
     "gulp-marked": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.5",
+    "moment": "^2.10.6",
     "rss": "^1.1.1",
     "through2": "^2.0.0"
   }

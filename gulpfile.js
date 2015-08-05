@@ -12,6 +12,7 @@ var gulp         = require('gulp'),
     del          = require('del'),
     rss          = require('rss'),
     through      = require('through2'),
+    moment       = require('moment'),
     each         = require('each-done'),
     path         = require('path'),
 
@@ -40,6 +41,7 @@ function collect() {
     // get url and content from file
     file.data.url = path.basename(file.path, path.extname(file.path));
     file.data.content = file.contents.toString();
+    file.data.date = moment(file.data.date).format('D MMM YYYY');
     // push into posts' array
     posts.push(file.data);
     this.push(file);
