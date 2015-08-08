@@ -1,8 +1,13 @@
 doctype html
-html(dir="LTR" lang="en")
+html(dir='LTR' lang='en')
   head
     include head
 
   body
-    .wrap
+    header.site-header
+      a(href='/')
+        h1.site-header__title= site.title
+      p.site-header__desc= site.description
+
+    main.main-content
       block content

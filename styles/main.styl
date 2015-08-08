@@ -33,9 +33,29 @@ h1, h2, h3, h4, h5, h6
 a
   color inherit
   text-decoration none
-  border-bottom 1px dashed #333
+  border-bottom 1px dashed base-text-color
   &:hover
     border-bottom-style solid
+
+.site-header
+  @extend $block
+  margin 5rem auto
+  text-align center
+
+  &__title
+    font-size 2.5em
+
+  &__desc
+    color #777
+
+.main-content
+  @extend $block
+  color base-font-color
+  margin 0 auto 7em
+  @media (max-device-width: 480px)
+    font-size .8em
+    @media (orientation: landscape)
+      font-size .6em
 
 article
   code
@@ -59,18 +79,7 @@ article
       font-style italic
       font-size 0.8em
       &::before
-        content '—'
-
-.wrap
-  font-size base-font-size
-  font-family base-font-family
-  color #333
-  max-width 30em
-  margin 3em auto 7em
-  @media (max-device-width: 480px)
-    font-size .8em
-    @media (orientation: landscape)
-      font-size .6em
+        content '— '
 
 .list
   margin 0
