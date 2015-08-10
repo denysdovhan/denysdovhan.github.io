@@ -50,12 +50,19 @@ a
 
 .main-content
   @extend $block
-  color base-font-color
-  margin 0 auto 7em
+  color base-text-color
   @media (max-device-width: 480px)
     font-size .8em
     @media (orientation: landscape)
       font-size .6em
+
+.site-footer
+  @extend $block
+  font-size .6rem
+  line-height 1.6em
+  margin 3rem auto 5rem
+  text-align center
+
 
 article
   code

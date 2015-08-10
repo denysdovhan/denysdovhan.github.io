@@ -11,3 +11,14 @@ html(dir='LTR' lang='en')
 
     main.main-content
       block content
+
+    footer.site-footer
+      | (͠◉_◉᷅ )
+      br
+      block footer
+        | If you think my blog is awesome, please 
+        a(href='/rss.xml', target='_blank') subscribe to RSS
+        |, share it to you 
+        a(href='https://twitter.com/intent/tweet?url=#{site.site_url}&text=#{site.title}&via=denysdovhan') followers in Twitter
+        |  and 
+        a(href='https://www.facebook.com/sharer.php?u=http://denysdovhan.com/#{site.site_url}&t=#{site.title}') friends in Facebook
