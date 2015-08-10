@@ -56,6 +56,29 @@ a
     @media (orientation: landscape)
       font-size .6em
 
+.post-item
+  display block
+  margin-bottom 2.5rem
+
+  &__header
+    display block
+    text-align center
+    h1
+      font-weight 700
+      font-size 1.5rem
+      line-height 1.2rem
+      letter-spacing -1px
+    time
+      font-family serif
+      font-style italic
+      font-size 0.8rem
+
+  &__summary
+    display block
+
+  &__content
+    display block
+
 .site-footer
   @extend $block
   font-size .6rem
@@ -87,29 +110,3 @@ article
       font-size 0.8em
       &::before
         content '— '
-
-.list
-  margin 0
-  padding 0
-  list-style none
-
-.list__item
-  @extend .list
-
-  a
-    font-weight 700
-    font-size 1.5em
-
-  time
-    font-family serif
-    font-style italic
-    font-size .7em
-    &:before
-      content '–'
-      margin 0 .5em 0
-
-  & + .list__item
-    margin-top 1em
-
-  p&-desc
-    font-size .8em
