@@ -1,21 +1,18 @@
-//- Meta
-meta(charset='UTF-8')
-//- if config.author
-  //- meta(name='author', content=config.author)
-//- if config.description
-  //- meta(name='author', content=config.description)
+meta(charset="utf-8")
+
+block title
+
+meta(name='author', content=site.author)
+
+meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
 meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
-//- Title
-title
-  if title
-    = title
-  else
-    = 'Blog'
+link(href=site.feed_url title=site.title rel="alternate" type="application/rss+xml")
 
-//- Favicon
-//- if theme.favicon
-  //- link(rel="icon", href=(config.root + theme.favicon))
+link(rel="stylesheet",  href="/styles/main.css")
 
-//- Styles
-//- !=css('styles/main.css')
+meta(property="og:site_name" content=site.title)
+meta(property="article:author" content=site.site_url)
+  
+meta(name="twitter:card" content="summary")
+meta(name="twitter:site" content="@denysdovahn")
