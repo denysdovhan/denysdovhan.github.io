@@ -12,6 +12,7 @@ var gulp         = require('gulp'),
     del          = require('del'),
     rss          = require('rss'),
     through      = require('through2'),
+    buildbranch  = require('gulp-build-branch'),
     moment       = require('moment'),
     each         = require('each-done'),
     path         = require('path'),
@@ -119,6 +120,13 @@ gulp.task('clean', function (cb) {
 
 // Build task
 gulp.task('build', ['posts', 'index', 'rss', 'styles']);
+
+gulp.task('deploy', ['build'], function () {
+  return buildbranch({
+    branch: 'master',
+    folder: 'dist'
+  });
+});
 
 // Watch task
 gulp.task('watch', ['build'], function () {
