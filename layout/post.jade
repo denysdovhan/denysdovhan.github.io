@@ -1,0 +1,20 @@
+extends layout
+
+block title
+  title= post.title
+
+block content
+  article.post-item
+    header.post-item__header
+      h1= post.title
+      time= post.date
+    section.post-item__content
+      != post.content
+
+block footer
+  | If you think «#{post.title}» is awesome, please 
+  a(href='/rss.xml', target='_blank') subscribe to RSS
+  |, share it to you 
+  a(href='https://twitter.com/intent/tweet?url=http://denysdovhan.com/#{post.url}&text=#{post.title}&via=denysdovhan', target="_blank") followers in Twitter
+  |  and 
+  a(href='https://www.facebook.com/sharer.php?u=http://denysdovhan.com/#{post.url}&t=#{post.title}', target="_blank") friends in Facebook

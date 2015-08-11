@@ -1,30 +1,52 @@
 {
   "name": "denysdovhan.github.io",
   "version": "0.0.0",
-  "description": "Blog by Denys Dovhan.",
-  "author": "Denys Dovhan <email@denysdovhan.com> (http://denysdovhan.com/)",
+  "description": "Blog from Denys Dovhan",
+  "author": {
+    "name": "Denys Dovhan",
+    "email": "email@denysdovhan.com",
+    "url": "denysdovhan.com"
+  },
+  "main": "gulpfile.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "githasdf"
+    "url": "https://github.com/denysdovhan/denysdovhan.github.io"
   },
-  "hexo": {
-    "version": "3.1.1"
+  "site": {
+    "title": "Denys Dovhan",
+    "description": "I'm developer • Student • Speaker • Author • Guitar player • Open Source addict",
+    "author": "Denys Dovhan",
+    "feed_url": "http://denysdovhan.com/rss.xml",
+    "site_url": "http://denysdovhan.com/",
+    "managingEditor": "email@denysdovhan.com (Denys Dovhan)",
+    "webMaster": "email@denysdovhan.com (Denys Dovhan)",
+    "categories": [
+      "css",
+      "frontend",
+      "design",
+      "js",
+      "javascript"
+    ]
   },
-  "dependencies": {
-    "hexo": "^3.1.0",
-    "hexo-browsersync": "^0.1.1",
-    "hexo-generator-archive": "^0.1.2",
-    "hexo-generator-category": "^0.1.2",
-    "hexo-generator-index": "^0.1.2",
-    "hexo-generator-tag": "^0.1.1",
-    "hexo-renderer-ejs": "^0.1.0",
-    "hexo-renderer-jade": "^0.1.0",
-    "hexo-renderer-marked": "^0.2.4",
-    "hexo-renderer-stylus": "^0.2.0",
-    "hexo-server": "^0.1.2"
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.2.5",
+    "del": "^1.2.0",
+    "each-done": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-build-branch": "^0.1.4",
+    "gulp-data": "^1.2.0",
+    "gulp-front-matter": "^1.2.3",
+    "gulp-jade": "^1.2.3",
+    "gulp-marked": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.0.5",
+    "moment": "^2.10.6",
+    "rss": "^1.1.1",
+    "through2": "^2.0.0"
   }
 }
