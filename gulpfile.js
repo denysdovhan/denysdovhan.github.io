@@ -12,7 +12,7 @@ var gulp         = require('gulp'),
     del          = require('del'),
     rss          = require('rss'),
     through      = require('through2'),
-    buildbranch  = require('gulp-build-branch'),
+    deploy       = require('gulp-gh-pages'),
     moment       = require('moment'),
     each         = require('each-done'),
     path         = require('path'),
@@ -93,7 +93,7 @@ gulp.task('index', ['collect'], function () {
 });
 
 // Create RSS
-gulp.task('rss', ['collect'], function () {
+gulp.task('rss', ['index'], function () {
   var feed = new rss(site);
 
   posts.forEach(function (post) {
@@ -122,10 +122,12 @@ gulp.task('clean', function (cb) {
 gulp.task('build', ['posts', 'index', 'rss', 'styles']);
 
 gulp.task('deploy', ['build'], function () {
-  return buildbranch({
-    branch: 'master',
-    folder: 'dist'
-  });
+  return gulp.src('dist/**/*')
+    .pipe(deploy({
+      branch: 'master',
+      push: false,
+      message: 'Update ' + moment().format('lll')
+    }));
 });
 
 // Watch task
