@@ -57,7 +57,7 @@ function collect() {
 }
 
 // Collect all posts
-gulp.task('collect', function () {
+gulp.task('collect', ['clean'], function () {
   posts = [];
   return gulp.src('posts/*.md')
       .pipe(frontMatter({ property: 'data', remove: true }))
@@ -78,7 +78,7 @@ gulp.task('posts', ['collect'], function (done) {
 });
 
 // Render styles
-gulp.task('styles', function () {
+gulp.task('styles', ['clean'], function () {
   return gulp.src(['styles/*','!styles/_*'])
       .pipe(stylus())
       .pipe(gulp.dest('dist/styles'));
@@ -113,14 +113,20 @@ gulp.task('rss', ['index'], function () {
   });
 });
 
+// Put CNAME file into dist
+gulp.task('cname', ['clean'], function () {
+  return gulp.src('CNAME').pipe(gulp.dest('dist'));
+});
+
 // Clean dist
 gulp.task('clean', function (cb) {
   del(['dist'], cb);
 });
 
 // Build task
-gulp.task('build', ['posts', 'index', 'rss', 'styles']);
+gulp.task('build', ['clean', 'posts', 'index', 'rss', 'styles', 'cname']);
 
+// Deploy task
 gulp.task('deploy', ['build'], function () {
   return gulp.src('dist/**/*')
     .pipe(deploy({
