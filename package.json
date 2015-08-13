@@ -10,6 +10,7 @@
   "main": "gulpfile.js",
   "private": true,
   "scripts": {
+    "start": "gulp",
     "deploy": "gulp deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
