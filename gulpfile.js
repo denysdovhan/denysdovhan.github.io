@@ -131,7 +131,7 @@ gulp.task('deploy', ['build'], function () {
   return gulp.src('dist/**/*')
     .pipe(deploy({
       branch: 'master',
-      push: false,
+      push: true,
       message: 'Update ' + moment().format('lll')
     }));
 });
