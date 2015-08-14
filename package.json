@@ -51,6 +51,7 @@
     "gulp-stylus": "^2.0.5",
     "moment": "^2.10.6",
     "rss": "^1.1.1",
+    "run-sequence": "^1.1.2",
     "through2": "^2.0.0"
   }
 }

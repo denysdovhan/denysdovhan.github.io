@@ -13,6 +13,7 @@ var gulp         = require('gulp'),
     rss          = require('rss'),
     through      = require('through2'),
     deploy       = require('gulp-gh-pages'),
+    sequence     = require('run-sequence'),
     moment       = require('moment'),
     each         = require('each-done'),
     path         = require('path'),
@@ -57,7 +58,7 @@ function collect() {
 }
 
 // Collect all posts
-gulp.task('collect', ['clean'], function () {
+gulp.task('collect', function () {
   posts = [];
   return gulp.src('posts/*.md')
       .pipe(frontMatter({ property: 'data', remove: true }))
@@ -78,7 +79,7 @@ gulp.task('posts', ['collect'], function (done) {
 });
 
 // Render styles
-gulp.task('styles', ['clean'], function () {
+gulp.task('styles', function () {
   return gulp.src(['styles/*','!styles/_*'])
       .pipe(stylus())
       .pipe(gulp.dest('dist/styles'));
@@ -114,7 +115,7 @@ gulp.task('rss', ['index'], function () {
 });
 
 // Put CNAME file into dist
-gulp.task('cname', ['clean'], function () {
+gulp.task('cname', function () {
   return gulp.src('CNAME').pipe(gulp.dest('dist'));
 });
 
@@ -124,7 +125,9 @@ gulp.task('clean', function (cb) {
 });
 
 // Build task
-gulp.task('build', ['clean', 'posts', 'index', 'rss', 'styles', 'cname']);
+gulp.task('build', function (cb) {
+  sequence('clean', ['posts', 'index', 'rss', 'styles', 'cname'], cb);
+});
 
 // Deploy task
 gulp.task('deploy', ['build'], function () {
@@ -146,8 +149,8 @@ gulp.task('watch', ['build'], function () {
   });
 
   // watch changes in styles, layout and posts
-  gulp.watch(['styles/**/*.{styl,stylus}'], ['styles']);
-  gulp.watch(['layout/**/*.jade', 'posts/*.md'], ['posts', 'index']);
+  gulp.watch(['styles/**/*'], ['styles']);
+  gulp.watch(['**/*.{jade,md}'], ['index', 'posts']);
 
   // emmit reloading
   gulp.watch('dist/**/*.{html,css}').on('change', reload);
