@@ -43,7 +43,7 @@ function collect() {
     // get url and content from file
     file.data.url = path.basename(file.path, path.extname(file.path));
     file.data.content = file.contents.toString();
-    file.data.date = moment(file.data.date).format('D MMM YYYY');
+    file.data.date = moment(new Date(file.data.date)).format('D MMM YYYY');
     // push into posts' array
     posts.push(file.data);
     this.push(file);
@@ -135,7 +135,7 @@ gulp.task('deploy', ['build'], function () {
     .pipe(deploy({
       branch: 'master',
       push: true,
-      message: 'Update ' + moment().format('lll')
+      message: 'Update ' + moment(new Date()).format('lll')
     }));
 });
 
