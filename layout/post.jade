@@ -7,7 +7,10 @@ block content
   article.post-item
     header.post-item__header
       h1= post.title
-      time= post.date
+      span.post-item__meta
+        time= post.date
+        |  — 
+        a(href='https://github.com/denysdovhan/denysdovhan.github.io/edit/premaster/#{post.url}.md') edit on github
     section.post-item__content
       != post.content
 
