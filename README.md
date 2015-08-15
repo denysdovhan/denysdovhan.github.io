@@ -42,6 +42,13 @@ And of course look at **npm**-scripts:
 * `npm start` — alias for `gulp watch`
 * `npm deploy` — alias for `gulp deploy`
 
+## To-do
+
+* [ ] Fix relative font-size.
+* [ ] Add pagination.
+* [ ] Migrate to ES2015 (Babel).
+* [ ] Get rid of front-matter.
+
 ## License
 
 [MIT][mit-license] © [Denys Dovhan][denysdovhan]
