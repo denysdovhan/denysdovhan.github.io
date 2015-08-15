@@ -5,7 +5,7 @@
         <description><![CDATA[I'm developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 15 Aug 2015 16:58:51 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 15 Aug 2015 19:53:13 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -23,7 +23,7 @@
             <link>http://denysdovhan.com/hello-world</link>
             <guid isPermaLink="true">http://denysdovhan.com/hello-world</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
-            <pubDate>Fri, 14 Aug 2015 00:00:00 GMT</pubDate>
+            <pubDate>Sat, 15 Aug 2015 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
