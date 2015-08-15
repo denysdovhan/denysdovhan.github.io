@@ -1,6 +1,6 @@
 ---
 title: Hello, World! Again.
-date: 14 Aug 2015
+date: 15 Aug 2015
 ---
 
 Hi everyone! Today I proud to present my personal blog! Again.
