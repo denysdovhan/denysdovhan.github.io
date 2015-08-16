@@ -40,10 +40,12 @@ Also there are these specified tasks:
 And of course look at **npm**-scripts:
 
 * `npm start` — alias for `gulp watch`
+* `npm build` — alias for `gulp build`
 * `npm deploy` — alias for `gulp deploy`
 
 ## To-do
 
+* [x] Fix Travis CI for pull requests.
 * [ ] Fix relative font-size.
 * [ ] Add pagination.
 * [ ] Migrate to ES2015 (Babel).
