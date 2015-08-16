@@ -11,13 +11,13 @@ Yep, that's right. You heard correctly. This isn't first time that I present my 
 
 It will be special just because:
 
-* It's **_open source_** — so now you can improve this and help me fix mistakes.
+* It's **_open source_** — so now you can improve this and help me to fix mistakes.
 * It's **_static_** — so this is convenient for me, superfast and hosted on [GitHub Pages][gh-pages].
-* It's **_habitual_** — because it has built using familiar tools, like Gulp, Jade, Markkdown and Travis.
+* It's **_habitual_** — because it has been built using familiar tools, like Gulp, Jade, Markkdown and Travis.
 
 ## Looking behind
 
-My first blog had built on [WordPress][wordpress]. It was convenient, but WordPress was too fat for me. I need just blog. Without widgets, without plugins, without themes. I need just some pages, with minimalistic, but readable design. Then I've lost my domain and forget about these problems.
+My first blog had been built on [WordPress][wordpress]. It was convenient, but WordPress was too fat for me. I need just blog. Without widgets, without plugins, without themes. I need just some pages, with minimalistic, but readable design. Then I've lost my domain and forgot about these problems.
 
 I've mentioned this about five months ago and decided to make perfect, slap-up site using modern technologies. But I haven't had time to do this and again left this idea.
 
