@@ -17,7 +17,6 @@ body
   text-rendering optimizeLegibility
 
   font-family base-font-family
-  font-size 1rem
   line-height 1.6em
   color: base-text-color
 
@@ -43,18 +42,18 @@ a
   text-align center
 
   &__title
-    font-size 2.5em
+    font-size 2.5rem
 
   &__desc
-    color #777
+    color lighten(base-text-color, 20%)
 
 .main-content
   @extend $block
   color base-text-color
   @media (max-device-width: 480px)
-    font-size .8em
+    font-size .8rem
     @media (orientation: landscape)
-      font-size .6em
+      font-size .6rem
 
 .post-item
   display block
@@ -80,8 +79,8 @@ a
 
 article
   code
-    font-size .9em
-    padding .2em .5em
+    font-size .9rem
+    padding .2rem .5rem
     background base-lines-color
     border-radius 3px
 
@@ -99,18 +98,18 @@ article
 
   blockquote
     margin 0
-    padding-left 1em
+    padding-left 1rem
     border-left 3px solid base-lines-color
     p a:last-of-type
       // Last link is a source
       font-style italic
-      font-size 0.8em
+      font-size 0.8rem
       &::before
         content '— '
 
 .site-footer
   @extend $block
   font-size .6rem
-  line-height 1.6em
+  line-height 1.6
   margin 3rem auto 5rem
   text-align center
