@@ -7,7 +7,7 @@
 html {
   height: 100%;
   max-height: 100%;
-  font-size: 25px;
+  font-size: 150%;
 }
 body {
   -webkit-font-smoothing: antialiased;
@@ -45,22 +45,22 @@ a:hover {
   text-align: center;
 }
 .site-header__title {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 .site-header__desc {
-  color: #777;
+  color: #696969;
 }
 .main-content {
   color: #444;
 }
 @media (max-device-width: 480px) {
   .main-content {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 }
 @media (max-device-width: 480px) and (orientation: landscape) {
   .main-content {
-    font-size: 0.6em;
+    font-size: 0.6rem;
   }
 }
 .post-item {
@@ -88,8 +88,8 @@ a:hover {
   display: block;
 }
 article code {
-  font-size: 0.9em;
-  padding: 0.2em 0.5em;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
   background: #eee;
   border-radius: 3px;
 }
@@ -107,19 +107,19 @@ article img {
 }
 article blockquote {
   margin: 0;
-  padding-left: 1em;
+  padding-left: 1rem;
   border-left: 3px solid #eee;
 }
 article blockquote p a:last-of-type {
   font-style: italic;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 article blockquote p a:last-of-type::before {
   content: '— ';
 }
 .site-footer {
   font-size: 0.6rem;
-  line-height: 1.6em;
+  line-height: 1.6;
   margin: 3rem auto 5rem;
   text-align: center;
 }
