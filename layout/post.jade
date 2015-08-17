@@ -3,6 +3,16 @@ extends layout
 block title
   title= post.title
 
+block meta
+  //- Summary contains tags
+  //- meta(property='description', content=post.summary)
+
+  //- if (post.image)
+      //- meta(name='og:image', content=post.image)
+  meta(name='og:url', content=post.url)
+  meta(name='og:title', content=post.title)
+  //- meta(name='og:description', content=post.summary)
+
 block content
   article.post-item
     header.post-item__header
