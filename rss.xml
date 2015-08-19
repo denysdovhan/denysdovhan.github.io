@@ -5,7 +5,7 @@
         <description><![CDATA[I'm developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 17 Aug 2015 21:43:05 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Aug 2015 11:33:22 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -15,6 +15,15 @@
         <category><![CDATA[design]]></category>
         <category><![CDATA[js]]></category>
         <category><![CDATA[javascript]]></category>
+        <item>
+            <title><![CDATA[Building pull requests differently using Travis CI]]></title>
+            <description><![CDATA[<p>Sometimes you need to run differently tests for pull requests on <a href="https://travis-ci.org">Travis CI</a>. In this post I&#39;m going to explain how you can do this.</p>
+]]></description>
+            <link>http://denysdovhan.com/building-pull-requests-using-travis</link>
+            <guid isPermaLink="true">http://denysdovhan.com/building-pull-requests-using-travis</guid>
+            <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
+            <pubDate>Wed, 19 Aug 2015 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Hello, World! Again.]]></title>
             <description><![CDATA[<p>Hi everyone! Today I proud to present my personal blog! Again.</p>
