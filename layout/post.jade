@@ -4,14 +4,13 @@ block title
   title= post.title.text
 
 block meta
-  //- Summary contains tags
-  //- meta(property='description', content=post.summary)
+  meta(property='description', content=post.desc.text)
 
-  //- if (post.image)
-      //- meta(name='og:image', content=post.image)
-  meta(name='og:url', content=post.url)
-  meta(name='og:title', content=post.title)
-  //- meta(name='og:description', content=post.summary)
+  meta(name='og:url', content=site.site_url + post.url)
+  if (post.image)
+      meta(name='og:image', content=post.image.src)
+  meta(name='og:title', content=post.title.text)
+  meta(name='og:description', content=post.desc.text)
 
 block content
   article.post-item
