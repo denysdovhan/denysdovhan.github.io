@@ -8,8 +8,8 @@ block content
     article.post-item
       header.post-item__header
         h1
-          a(href=post.url)= post.title
+          a(href=post.url)= post.title.text
         span.post-item__meta
-          time= post.date
-      section.post-item__summary
-        != post.summary
+          time= post.date.text
+      section.post-item__desc
+        != post.desc.html

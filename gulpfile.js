@@ -3,10 +3,9 @@
 var gulp         = require('gulp'),
     jade         = require('gulp-jade'),
     data         = require('gulp-data'),
-    marked       = require('gulp-marked'),
     rename       = require('gulp-rename'),
     stylus       = require('gulp-stylus'),
-    frontMatter  = require('gulp-front-matter'),
+    extract      = require('article-data'),
 
     fs           = require('fs'),
     del          = require('del'),
@@ -14,6 +13,7 @@ var gulp         = require('gulp'),
     through      = require('through2'),
     deploy       = require('gulp-gh-pages'),
     sequence     = require('run-sequence'),
+    assign       = require('object-assign'),
     moment       = require('moment'),
     each         = require('each-done'),
     path         = require('path'),
@@ -27,31 +27,17 @@ var site = require('./package.json').site;
 // Array of posts
 var posts = [];
 
-// Get summary
-function summarize(marker) {
-  return through.obj(function (file, enc, cb) {
-    // get file's part before marker
-    file.data.summary = file.contents.toString().split(marker)[0];
-    this.push(file);
-    cb();
-  });
-}
-
 // Function that collects all posts
 function collect() {
   return through.obj(function (file, enc, cb) {
-    // get url and content from file
-    file.data.url = path.basename(file.path, path.extname(file.path));
-    file.data.content = file.contents.toString();
-    file.data.date = moment(new Date(file.data.date)).format('D MMM YYYY');
-    // push into posts' array
-    posts.push(file.data);
-    this.push(file);
-    cb();
-  },
-  function (cb) {
+    posts.push(assign({
+      filename: file.relative,
+      url: path.basename(file.relative, path.extname(file.relative)).substr(11)
+    }, extract(file.contents.toString(), 'D MMM YYYY', 'en')));
+    cb(null, file);
+  }, function (cb) {
     posts.sort(function (a, b) {
-      return b.date - a.date;
+      return b.date.unix - a.date.unix;
     });
     cb();
   });
@@ -61,9 +47,6 @@ function collect() {
 gulp.task('collect', function () {
   posts = [];
   return gulp.src('posts/*.md')
-      .pipe(frontMatter({ property: 'data', remove: true }))
-      .pipe(marked())
-      .pipe(summarize('<!-- more -->'))
       .pipe(collect());
 });
 
