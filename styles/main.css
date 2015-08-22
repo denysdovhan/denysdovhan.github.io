@@ -91,7 +91,7 @@ a:hover {
   font-style: italic;
   font-size: 0.8rem;
 }
-.post-item__summary {
+.post-item__desc {
   display: block;
 }
 .post-item__content {
