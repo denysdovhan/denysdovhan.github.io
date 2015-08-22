@@ -39,18 +39,18 @@
     "browser-sync": "^2.2.5"
   },
   "dependencies": {
+    "article-data": "^0.3.1",
     "del": "^1.2.0",
     "each-done": "^1.0.0",
     "gulp": "^3.9.0",
     "gulp-build-branch": "^0.1.4",
     "gulp-data": "^1.2.0",
-    "gulp-front-matter": "^1.2.3",
     "gulp-gh-pages": "^0.5.2",
     "gulp-jade": "^1.1.0",
-    "gulp-marked": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.5",
     "moment": "^2.10.6",
+    "object-assign": "^4.0.1",
     "rss": "^1.1.1",
     "run-sequence": "^1.1.2",
     "through2": "^2.0.0"
