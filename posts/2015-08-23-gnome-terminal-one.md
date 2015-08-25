@@ -45,7 +45,7 @@ Also, I recommend to use [Inconsolata (only latin)][inconsolata] or [Fira Mono][
 So, now perfect One Light and One Dark themes available on GitHub. Check out [gnome-terminal-one][gnome-terminal-one] repo.
 
 
-[gnome-terminal-one]: https://github.com/denysdovhan/gnome-terminal-one
+[gnome-terminal-one]: https://github.com/denysdovhan/one-gnome-terminal
 [atom]: https://atom.io/
 [one-dark]: https://atom.io/themes/one-dark-syntax
 [one-light]: https://atom.io/themes/one-light-syntax
