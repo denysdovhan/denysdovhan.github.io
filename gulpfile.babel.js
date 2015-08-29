@@ -63,6 +63,7 @@ gulp.task('styles', () =>
   gulp.src(['styles/*','!styles/_*'])
     .pipe(stylus())
     .pipe(gulp.dest('dist/styles'))
+    .pipe(browserSync.stream())
 );
 
 // Render index page
