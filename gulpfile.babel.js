@@ -23,8 +23,8 @@ const site = require('./package.json').site;
 let posts = [];
 
 // Function that collects all posts
-const collect = () => {
-  return through.obj(
+const collect = () =>
+  through.obj(
     (file, enc, cb) => {
       posts.push(assign({
         filename: file.relative,
@@ -39,7 +39,6 @@ const collect = () => {
       cb();
     }
   );
-};
 
 // Post renderer
 const render = (post) =>
