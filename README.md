@@ -48,8 +48,8 @@ And of course look at **npm**-scripts:
 * [x] Fix Travis CI for pull requests.
 * [x] Fix relative font-size.
 * [x] Add meta for posts.
+* [x] Migrate to ES2015 (using Babel).
 * [ ] Add pagination.
-* [ ] Migrate to ES2015 (Babel).
 * [ ] Get rid of front-matter.
 
 ## License
