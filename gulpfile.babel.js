@@ -90,19 +90,15 @@ gulp.task('rss', ['index'], () => {
   const xml = feed.xml({ indent: true });
 
   fs.writeFile('dist/rss.xml', xml, { encoding: 'utf-8' }, (err) => {
-    if (err) throw err;
+    if (err) { throw err; }
   });
 });
 
 // Put CNAME file into dist
-gulp.task('cname', () =>
-  gulp.src('CNAME').pipe(gulp.dest('dist'))
-);
+gulp.task('cname', () => gulp.src('CNAME').pipe(gulp.dest('dist')));
 
 // Clean dist
-gulp.task('clean', (cb) =>
-  del(['dist'], cb)
-);
+gulp.task('clean', (cb) => del(['dist'], cb));
 
 // Build task
 gulp.task('build', (cb) =>
