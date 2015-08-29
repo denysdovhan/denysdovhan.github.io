@@ -41,6 +41,14 @@ const collect = () => {
   );
 };
 
+// Post renderer
+const render = (post) =>
+  gulp.src('layout/post.jade')
+    .pipe(data({ site: site, post: post }))
+    .pipe(jade({ pretty: true }))
+    .pipe(rename({ dirname: post.url, basename: 'index' }))
+    .pipe(gulp.dest('dist'));
+
 // Collect all posts
 gulp.task('collect', () => {
   posts = [];
@@ -49,14 +57,7 @@ gulp.task('collect', () => {
 });
 
 // Render all posts
-gulp.task('posts', ['collect'], (done) => {
-  each(posts, (post) =>
-    gulp.src('layout/post.jade')
-      .pipe(data({ site: site, post: post }))
-      .pipe(jade({ pretty: true }))
-      .pipe(rename({ dirname: post.url, basename: 'index' }))
-      .pipe(gulp.dest('dist')), done);
-});
+gulp.task('posts', ['collect'], (done) => { each(posts, render, done); });
 
 // Render styles
 gulp.task('styles', () =>
