@@ -1,86 +1,83 @@
-'use strict';
-
-var gulp         = require('gulp'),
-    jade         = require('gulp-jade'),
-    data         = require('gulp-data'),
-    rename       = require('gulp-rename'),
-    stylus       = require('gulp-stylus'),
-    extract      = require('article-data'),
-
-    fs           = require('fs'),
-    del          = require('del'),
-    rss          = require('rss'),
-    through      = require('through2'),
-    deploy       = require('gulp-gh-pages'),
-    sequence     = require('run-sequence'),
-    assign       = require('object-assign'),
-    moment       = require('moment'),
-    each         = require('each-done'),
-    path         = require('path'),
-
-    browserSync  = require('browser-sync'),
-    reload       = browserSync.reload;
+import gulp         from 'gulp';
+import jade         from 'gulp-jade';
+import data         from 'gulp-data';
+import rename       from 'gulp-rename';
+import stylus       from 'gulp-stylus';
+import extract      from 'article-data';
+import fs           from 'fs';
+import path         from 'path';
+import del          from 'del';
+import rss          from 'rss';
+import through      from 'through2';
+import deploy       from 'gulp-gh-pages';
+import sequence     from 'run-sequence';
+import assign       from 'object-assign';
+import moment       from 'moment';
+import each         from 'each-done';
+import browserSync  from 'browser-sync';
 
 // Site meta data
-var site = require('./package.json').site;
+const site = require('./package.json').site;
 
 // Array of posts
-var posts = [];
+let posts = [];
 
 // Function that collects all posts
-function collect() {
-  return through.obj(function (file, enc, cb) {
-    posts.push(assign({
-      filename: file.relative,
-      url: path.basename(file.relative, path.extname(file.relative)).substr(11)
-    }, extract(file.contents.toString(), 'D MMM YYYY', 'en')));
-    cb(null, file);
-  }, function (cb) {
-    posts.sort(function (a, b) {
-      return b.date.unix - a.date.unix;
-    });
-    cb();
-  });
-}
+const collect = () => {
+  return through.obj(
+    (file, enc, cb) => {
+      posts.push(assign({
+        filename: file.relative,
+        url: path
+              .basename(file.relative, path.extname(file.relative))
+              .substr(11)
+      }, extract(file.contents.toString(), 'D MMM YYYY', 'en')));
+      cb(null, false);
+    },
+    (cb) => {
+      posts.sort((a,b) => b.date.unix - a.date.unix);
+      cb();
+    }
+  );
+};
 
 // Collect all posts
-gulp.task('collect', function () {
+gulp.task('collect', () => {
   posts = [];
   return gulp.src('posts/*.md')
-      .pipe(collect());
+    .pipe(collect());
 });
 
 // Render all posts
-gulp.task('posts', ['collect'], function (done) {
-  each(posts, function (post) {
-    return gulp.src('layout/post.jade')
+gulp.task('posts', ['collect'], (done) => {
+  each(posts, (post) =>
+    gulp.src('layout/post.jade')
       .pipe(data({ site: site, post: post }))
       .pipe(jade({ pretty: true }))
       .pipe(rename({ dirname: post.url, basename: 'index' }))
-      .pipe(gulp.dest('dist'));
-  }, done);
+      .pipe(gulp.dest('dist')), done);
 });
 
 // Render styles
-gulp.task('styles', function () {
-  return gulp.src(['styles/*','!styles/_*'])
-      .pipe(stylus())
-      .pipe(gulp.dest('dist/styles'));
-});
+gulp.task('styles', () =>
+  gulp.src(['styles/*','!styles/_*'])
+    .pipe(stylus())
+    .pipe(gulp.dest('dist/styles'))
+);
 
 // Render index page
-gulp.task('index', ['collect'], function () {
-  return gulp.src('layout/index.jade')
+gulp.task('index', ['collect'], () =>
+  gulp.src('layout/index.jade')
     .pipe(data({ site: site, posts: posts }))
     .pipe(jade({ pretty: true }))
-    .pipe(gulp.dest('dist'));
-});
+    .pipe(gulp.dest('dist'))
+);
 
 // Create RSS
-gulp.task('rss', ['index'], function () {
-  var feed = new rss(site);
+gulp.task('rss', ['index'], () => {
+  let feed = new rss(site);
 
-  posts.forEach(function (post) {
+  posts.forEach((post) => {
     feed.item({
       title: post.title,
       description: post.summary,
@@ -90,40 +87,40 @@ gulp.task('rss', ['index'], function () {
     });
   });
 
-  var xml = feed.xml({ indent: true });
+  const xml = feed.xml({ indent: true });
 
-  fs.writeFile('dist/rss.xml', xml, { encoding: 'utf-8' }, function (err) {
-    if (err) { throw err; }
+  fs.writeFile('dist/rss.xml', xml, { encoding: 'utf-8' }, (err) => {
+    if (err) throw err;
   });
 });
 
 // Put CNAME file into dist
-gulp.task('cname', function () {
-  return gulp.src('CNAME').pipe(gulp.dest('dist'));
-});
+gulp.task('cname', () =>
+  gulp.src('CNAME').pipe(gulp.dest('dist'))
+);
 
 // Clean dist
-gulp.task('clean', function (cb) {
-  del(['dist'], cb);
-});
+gulp.task('clean', (cb) =>
+  del(['dist'], cb)
+);
 
 // Build task
-gulp.task('build', function (cb) {
-  sequence('clean', ['posts', 'index', 'rss', 'styles', 'cname'], cb);
-});
+gulp.task('build', (cb) =>
+  sequence('clean', ['posts', 'index', 'rss', 'styles', 'cname'], cb)
+);
 
 // Deploy task
-gulp.task('deploy', ['build'], function () {
-  return gulp.src('dist/**/*')
+gulp.task('deploy', ['build'], () =>
+  gulp.src('dist/**/*')
     .pipe(deploy({
       branch: 'master',
       push: true,
       message: 'Update ' + moment(new Date()).format('lll')
-    }));
-});
+    }))
+);
 
 // Watch task
-gulp.task('watch', ['build'], function () {
+gulp.task('watch', ['build'], () => {
   browserSync({
     server: './dist',
     notify: false,
@@ -136,7 +133,7 @@ gulp.task('watch', ['build'], function () {
   gulp.watch(['**/*.{jade,md}'], ['index', 'posts']);
 
   // emmit reloading
-  gulp.watch('dist/**/*.{html,css}').on('change', reload);
+  gulp.watch('dist/**/*.{html,css}').on('change', browserSync.reload);
 });
 
 // Default task
