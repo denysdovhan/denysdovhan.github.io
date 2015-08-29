@@ -58,20 +58,20 @@ gulp.task('collect', () => {
 // Render all posts
 gulp.task('posts', ['collect'], (done) => { each(posts, render, done); });
 
-// Render styles
-gulp.task('styles', () =>
-  gulp.src(['styles/*','!styles/_*'])
-    .pipe(stylus())
-    .pipe(gulp.dest('dist/styles'))
-    .pipe(browserSync.stream())
-);
-
 // Render index page
 gulp.task('index', ['collect'], () =>
   gulp.src('layout/index.jade')
     .pipe(data({ site: site, posts: posts }))
     .pipe(jade({ pretty: true }))
     .pipe(gulp.dest('dist'))
+);
+
+// Render styles
+gulp.task('styles', () =>
+  gulp.src(['styles/*','!styles/_*'])
+    .pipe(stylus())
+    .pipe(gulp.dest('dist/styles'))
+    .pipe(browserSync.stream())
 );
 
 // Create RSS
