@@ -51,7 +51,7 @@ const render = (post) =>
 // Collect all posts
 gulp.task('collect', () => {
   posts = [];
-  return gulp.src('posts/*.md')
+  return gulp.src(['posts/*.md', '!posts/_*'])
     .pipe(collect());
 });
 
