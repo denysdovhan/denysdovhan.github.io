@@ -59,12 +59,34 @@ gulp.task('collect', () => {
 gulp.task('posts', ['collect'], (done) => { each(posts, render, done); });
 
 // Render index page
-gulp.task('index', ['collect'], () =>
-  gulp.src('layout/index.jade')
-    .pipe(data({ site: site, posts: posts }))
-    .pipe(jade({ pretty: true }))
-    .pipe(gulp.dest('dist'))
-);
+gulp.task('index', ['collect'], () => {
+  let promises = [];
+  let onPage = [];
+  let count = 0;
+  let page = 0;
+
+  posts.forEach((post) => {
+    onPage.push(post);
+    count++;
+
+    if (count == 1) {
+      promises.push(new Promise((resolve, reject) => {
+        gulp.src('layout/index.jade')
+          .pipe(data({ site: site, posts: onPage }))
+          .pipe(jade({ pretty: true }))
+          .pipe(rename({ dirname: `${page ? page : ''}`, basename: 'index' }))
+          .pipe(gulp.dest('dist'))
+          .on('error', reject)
+          .on('end', resolve);
+      }));
+      count = 0;
+      onPage = [];
+      page++;
+    }
+  });
+
+  return Promise.all(promises);
+});
 
 // Render styles
 gulp.task('styles', () =>
