@@ -62,14 +62,12 @@ gulp.task('posts', ['collect'], (done) => { each(posts, render, done); });
 gulp.task('index', ['collect'], () => {
   let promises = [];
   let onPage = [];
-  let count = 0;
   let page = 0;
 
   posts.forEach((post) => {
     onPage.push(post);
-    count++;
 
-    if (count == 1) {
+    if (onPage.length == 1) {
       promises.push(new Promise((resolve, reject) => {
         gulp.src('layout/index.jade')
           .pipe(data({ site: site, posts: onPage }))
@@ -79,7 +77,6 @@ gulp.task('index', ['collect'], () => {
           .on('error', reject)
           .on('end', resolve);
       }));
-      count = 0;
       onPage = [];
       page++;
     }
