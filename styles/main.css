@@ -127,6 +127,17 @@ article blockquote p a:last-of-type {
 article blockquote p a:last-of-type::before {
   content: '— ';
 }
+.nav__left {
+  float: left;
+}
+.nav__right {
+  float: right;
+}
+.nav:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 .site-footer {
   font-size: 0.6rem;
   line-height: 1.6;
