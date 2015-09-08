@@ -1,6 +1,6 @@
 import gulp         from 'gulp';
 import jade         from 'gulp-jade';
-import data         from 'gulp-data';
+import put          from 'gulp-data';
 import rename       from 'gulp-rename';
 import stylus       from 'gulp-stylus';
 import extract      from 'article-data';
@@ -40,12 +40,12 @@ const collect = () =>
     }
   );
 
-// Post renderer
-const render = (post) =>
-  gulp.src('layout/post.jade')
-    .pipe(data({ site: site, post: post }))
+// Page renderer
+const render = (layout, data, url) =>
+  gulp.src(layout)
+    .pipe(put(assign({ site }, data)))
     .pipe(jade({ pretty: true }))
-    .pipe(rename({ dirname: post.url, basename: 'index' }))
+    .pipe(rename({ dirname: url, basename: 'index' }))
     .pipe(gulp.dest('dist'));
 
 // Collect all posts
@@ -56,15 +56,37 @@ gulp.task('collect', () => {
 });
 
 // Render all posts
-gulp.task('posts', ['collect'], (done) => { each(posts, render, done); });
+gulp.task('posts', ['collect'], (cb) => {
+  each(posts, post => render('layout/post.jade', { post }, post.url), cb);
+});
 
 // Render index page
-gulp.task('index', ['collect'], () =>
-  gulp.src('layout/index.jade')
-    .pipe(data({ site: site, posts: posts }))
-    .pipe(jade({ pretty: true }))
-    .pipe(gulp.dest('dist'))
-);
+gulp.task('index', ['collect'], () => {
+  const perPage = 1;
+  let promises = [];
+  let onPage = [];
+  let page = 1;
+
+  posts.forEach((post) => {
+    onPage.push(post);
+
+    if (onPage.length == perPage) {
+      promises.push(new Promise((resolve, reject) => {
+        render('layout/index.jade', {
+          posts: onPage,
+          prevPage: page-1 != 0 ? (page-1 == 1) ? '/':`/page/${page-1}` : false,
+          nextPage: page*perPage < posts.length ? `/page/${page+1}`     : false
+        }, page != 1 ? `/page/${page}` : '/')
+          .on('error', reject)
+          .on('end', resolve);
+      }));
+      onPage = [];
+      page++;
+    }
+  });
+
+  return Promise.all(promises);
+});
 
 // Render styles
 gulp.task('styles', () =>
