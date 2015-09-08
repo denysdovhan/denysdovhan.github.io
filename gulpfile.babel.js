@@ -77,7 +77,7 @@ gulp.task('index', ['collect'], () => {
         render('layout/index.jade', {
           posts: onPage,
           prevPage: page-1 != 0 ? (page-1 == 1) ? '/':`/page/${page-1}` : false,
-          nextPage: page*perPage < posts.length ? `/page/${page+1}`     : false
+          nextPage: page*perPage < posts.length ?     `/page/${page+1}` : false
         }, page != 1 ? `/page/${page}` : '/')
           .on('error', reject)
           .on('end', resolve);
