@@ -134,7 +134,7 @@ gulp.task('deploy', ['build'], () =>
     .pipe(deploy({
       branch: 'master',
       push: true,
-      message: 'Update ' + moment(new Date()).format('lll')
+      message: `Update ${moment(new Date()).format('lll')}`
     }))
 );
 
