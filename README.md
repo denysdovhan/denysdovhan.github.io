@@ -50,7 +50,9 @@ And of course look at **npm**-scripts:
 * [x] Add meta for posts.
 * [x] Get rid of front-matter.
 * [x] Migrate to ES2015 (using Babel).
-* [ ] Add pagination.
+* [x] Add pagination [#2](https://github.com/denysdovhan/denysdovhan.github.io/pull/2).
+* [ ] Reloading `package.json` and `gulpfile.js`.
+* [ ] Fix vertical rhythm.
 
 ## License
 
