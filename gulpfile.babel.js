@@ -19,6 +19,9 @@ import browserSync  from 'browser-sync';
 // Site meta data
 const site = require('./package.json').site;
 
+// Amount of posts on page
+const perPage = 5;
+
 // Array of posts
 let posts = [];
 
@@ -62,7 +65,6 @@ gulp.task('posts', ['collect'], (cb) => {
 
 // Render index page
 gulp.task('index', ['collect'], () => {
-  const perPage = 1;
   let promises = [];
   let onPage = [];
   let page = 1;
