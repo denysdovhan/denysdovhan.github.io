@@ -13,3 +13,9 @@ block content
           time= post.date.text
       section.post-item__desc
         != post.desc.html
+
+  nav.nav
+    if prevPage
+      a(href=prevPage).nav__left ⇜ Prev
+    if nextPage
+      a(href=nextPage).nav__right Next ⇝
