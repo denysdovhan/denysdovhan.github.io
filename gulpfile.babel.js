@@ -69,10 +69,11 @@ gulp.task('index', ['collect'], () => {
   let onPage = [];
   let page = 1;
 
-  posts.forEach((post) => {
+  posts.forEach((post, i) => {
     onPage.push(post);
+    i++;
 
-    if (onPage.length == perPage) {
+    if (i % perPage == 0 || i == posts.length) {
       promises.push(new Promise((resolve, reject) => {
         render('layout/index.jade', {
           posts: onPage,
