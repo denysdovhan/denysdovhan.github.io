@@ -153,7 +153,7 @@ gulp.task('watch', ['build'], () => {
 
   // watch changes in styles, layout and posts
   gulp.watch(['styles/**/*'], ['styles']);
-  gulp.watch(['**/*.{jade,md}'], ['index', 'posts']);
+  gulp.watch(['**/*.{jade,md,js,json}'], ['posts', 'index', 'rss']);
 
   // emmit reloading
   gulp.watch('dist/**/*.{html,css}').on('change', browserSync.reload);
