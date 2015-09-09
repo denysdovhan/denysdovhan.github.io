@@ -16,8 +16,8 @@ import moment       from 'moment';
 import each         from 'each-done';
 import browserSync  from 'browser-sync';
 
-// Site meta data
-const site = require('./package.json').site;
+// Parse package.json sync
+const loadConfig = () => JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
 
 // Amount of posts on page
 const perPage = 5;
@@ -46,7 +46,7 @@ const collect = () =>
 // Page renderer
 const render = (layout, data, url) =>
   gulp.src(layout)
-    .pipe(put(assign({ site }, data)))
+    .pipe(put(assign({ site: loadConfig().site }, data)))
     .pipe(jade({ pretty: true }))
     .pipe(rename({ dirname: url, basename: 'index' }))
     .pipe(gulp.dest('dist'));
@@ -101,6 +101,7 @@ gulp.task('styles', () =>
 
 // Create RSS
 gulp.task('rss', ['index'], () => {
+  const site = loadConfig().site;
   let feed = new rss(site);
 
   posts.forEach((post) => {
@@ -152,7 +153,7 @@ gulp.task('watch', ['build'], () => {
 
   // watch changes in styles, layout and posts
   gulp.watch(['styles/**/*'], ['styles']);
-  gulp.watch(['**/*.{jade,md}'], ['index', 'posts']);
+  gulp.watch(['**/*.{jade,md,js,json}'], ['posts', 'index', 'rss']);
 
   // emmit reloading
   gulp.watch('dist/**/*.{html,css}').on('change', browserSync.reload);
