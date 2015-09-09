@@ -51,7 +51,7 @@ And of course look at **npm**-scripts:
 * [x] Get rid of front-matter.
 * [x] Migrate to ES2015 (using Babel).
 * [x] Add pagination [#2](https://github.com/denysdovhan/denysdovhan.github.io/pull/2).
-* [ ] Reloading `package.json` and `gulpfile.js`.
+* [x] Reloading `package.json` and `gulpfile.js`.
 * [ ] Fix vertical rhythm.
 
 ## License
