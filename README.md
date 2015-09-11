@@ -45,13 +45,11 @@ And of course look at **npm**-scripts:
 
 ## To-do
 
-* [x] Fix Travis CI for pull requests.
-* [x] Fix relative font-size.
-* [x] Add meta for posts.
 * [x] Get rid of front-matter.
 * [x] Migrate to ES2015 (using Babel).
 * [x] Add pagination [#2](https://github.com/denysdovhan/denysdovhan.github.io/pull/2).
 * [x] Reloading `package.json` and `gulpfile.js`.
+* [ ] Migrate to PostCSS.
 * [ ] Fix vertical rhythm.
 
 ## License
