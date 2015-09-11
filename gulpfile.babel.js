@@ -38,7 +38,9 @@ const collect = () =>
       cb(null, false);
     },
     (cb) => {
-      posts.filter(x => !!x.date).sort((a,b) => b.date.unix - a.date.unix);
+      posts = posts
+        .filter(x => !!x.date)
+        .sort((a,b) => b.date.unix - a.date.unix);
       cb();
     }
   );
