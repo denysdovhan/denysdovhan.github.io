@@ -5,7 +5,7 @@
         <description><![CDATA[I'm developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 11 Sep 2015 14:56:21 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 11 Sep 2015 16:25:23 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -17,15 +17,8 @@
         <category><![CDATA[javascript]]></category>
         <item>
             <title><![CDATA[[object Object]]]></title>
-            <link>http://denysdovhan.com/hello-world</link>
-            <guid isPermaLink="true">http://denysdovhan.com/hello-world</guid>
-            <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
-            <pubDate>Invalid Date</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[[object Object]]]></title>
-            <link>http://denysdovhan.com/building-pull-requests-using-travis</link>
-            <guid isPermaLink="true">http://denysdovhan.com/building-pull-requests-using-travis</guid>
+            <link>http://denysdovhan.com/webspace-on-the-stage</link>
+            <guid isPermaLink="true">http://denysdovhan.com/webspace-on-the-stage</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Invalid Date</pubDate>
         </item>
@@ -38,8 +31,15 @@
         </item>
         <item>
             <title><![CDATA[[object Object]]]></title>
-            <link>http://denysdovhan.com/webspace-on-the-stage</link>
-            <guid isPermaLink="true">http://denysdovhan.com/webspace-on-the-stage</guid>
+            <link>http://denysdovhan.com/building-pull-requests-using-travis</link>
+            <guid isPermaLink="true">http://denysdovhan.com/building-pull-requests-using-travis</guid>
+            <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
+            <pubDate>Invalid Date</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[[object Object]]]></title>
+            <link>http://denysdovhan.com/hello-world</link>
+            <guid isPermaLink="true">http://denysdovhan.com/hello-world</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Invalid Date</pubDate>
         </item>
