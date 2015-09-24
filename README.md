@@ -50,6 +50,7 @@ And of course look at **npm**-scripts:
 * [x] Add pagination [#2](https://github.com/denysdovhan/denysdovhan.github.io/pull/2).
 * [x] Reloading `package.json` and `gulpfile.js`.
 * [ ] Migrate to PostCSS.
+* [ ] Add syntax highlighting.
 * [ ] Fix vertical rhythm.
 
 ## License
