@@ -12,7 +12,7 @@ It will be special just because:
 
 * It's **_open source_** — so now you can improve it and help me to fix mistakes.
 * It's **_static_** — so this is convenient for me, superfast and hosted on [GitHub Pages][gh-pages].
-* It's **_habitual_** — because it has been built using familiar tools, like Gulp, Jade, Markkdown and Travis.
+* It's **_habitual_** — because it has been built using familiar tools, like Gulp, Jade, Markdown and Travis.
 
 ## Looking behind
 
