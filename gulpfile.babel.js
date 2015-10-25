@@ -108,11 +108,11 @@ gulp.task('rss', ['index'], () => {
 
   posts.forEach((post) => {
     feed.item({
-      title: post.title,
-      description: post.summary,
+      title: post.title.text,
+      description: post.desc.text,
       url: site.site_url + post.url,
       author: site.author,
-      date: post.date
+      date: post.date.text
     });
   });
 
