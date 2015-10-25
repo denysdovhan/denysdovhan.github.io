@@ -4,7 +4,7 @@
         <description><![CDATA[I'm developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 19 Oct 2015 07:31:34 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 25 Oct 2015 15:04:51 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -14,6 +14,13 @@
         <category><![CDATA[design]]></category>
         <category><![CDATA[js]]></category>
         <category><![CDATA[javascript]]></category>
+        <item>
+            <title><![CDATA[[object Object]]]></title>
+            <link>http://denysdovhan.com/nodeschool-chernivtsi-1</link>
+            <guid isPermaLink="true">http://denysdovhan.com/nodeschool-chernivtsi-1</guid>
+            <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
+            <pubDate>Invalid Date</pubDate>
+        </item>
         <item>
             <title><![CDATA[[object Object]]]></title>
             <link>http://denysdovhan.com/chernivtsi-nodeschool-chapter</link>
