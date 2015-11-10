@@ -17,8 +17,7 @@ import moment       from 'moment';
 import each         from 'each-done';
 import express      from 'express';
 
-// Parse package.json sync
-const loadConfig = () => JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
+import pkg          from './package';
 
 // Amount of posts on page
 const perPage = 5;
@@ -49,7 +48,7 @@ const collect = () =>
 // Page renderer
 const render = (layout, data, url) =>
   gulp.src(layout)
-    .pipe(put(assign({ site: loadConfig().site }, data)))
+    .pipe(put(assign({ site: pkg.site }, data)))
     .pipe(jade({ pretty: true }))
     .pipe(rename({ dirname: url, basename: 'index' }))
     .pipe(gulp.dest('dist'));
@@ -103,8 +102,8 @@ gulp.task('styles', () =>
 
 // Create RSS
 gulp.task('rss', ['index'], () => {
-  const site = loadConfig().site;
-  let feed = new rss(site);
+  const site = pkg.site;
+  let feed = new rss(pkg.site);
 
   posts.forEach((post) => {
     feed.item({
