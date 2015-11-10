@@ -1,4 +1,5 @@
 import gulp         from 'gulp';
+import { log }      from 'gulp-util';
 import jade         from 'gulp-jade';
 import put          from 'gulp-data';
 import rename       from 'gulp-rename';
@@ -14,7 +15,7 @@ import sequence     from 'run-sequence';
 import assign       from 'object-assign';
 import moment       from 'moment';
 import each         from 'each-done';
-import browserSync  from 'browser-sync';
+import express      from 'express';
 
 // Parse package.json sync
 const loadConfig = () => JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
@@ -95,10 +96,9 @@ gulp.task('index', ['collect'], () => {
 
 // Render styles
 gulp.task('styles', () =>
-  gulp.src(['styles/*','!styles/_*'])
+  gulp.src('styles/main.styl')
     .pipe(stylus())
     .pipe(gulp.dest('dist/styles'))
-    .pipe(browserSync.stream())
 );
 
 // Create RSS
@@ -145,20 +145,15 @@ gulp.task('deploy', ['build'], () =>
 );
 
 // Watch task
-gulp.task('watch', ['build'], () => {
-  browserSync({
-    server: './dist',
-    notify: false,
-    debugInfo: false,
-    host: 'localhost'
-  });
-
+gulp.task('watch', ['build', 'server'], () => {
   // watch changes in styles, layout and posts
   gulp.watch(['styles/**/*'], ['styles']);
-  gulp.watch(['**/*.{jade,md,js,json}'], ['posts', 'index', 'rss']);
+  gulp.watch(['**/*.{jade,md,json}'], ['posts', 'index', 'rss']);
+});
 
-  // emmit reloading
-  gulp.watch('dist/**/*.{html,css}').on('change', browserSync.reload);
+gulp.task('server', () => {
+  express().use(express.static('dist')).listen(4000);
+  log('Server is running on http://localhost:4000');
 });
 
 // Default task
