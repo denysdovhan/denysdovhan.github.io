@@ -4,7 +4,7 @@
         <description><![CDATA[I'm developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 12 Nov 2015 19:49:02 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 16 Nov 2015 18:06:41 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -14,6 +14,14 @@
         <category><![CDATA[design]]></category>
         <category><![CDATA[js]]></category>
         <category><![CDATA[javascript]]></category>
+        <item>
+            <title><![CDATA[46th week]]></title>
+            <description><![CDATA[Yet another week. So lets take a look at thing that happened with me for last week.]]></description>
+            <link>http://denysdovhan.com/46-week</link>
+            <guid isPermaLink="true">http://denysdovhan.com/46-week</guid>
+            <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
+            <pubDate>Mon, 16 Nov 2015 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[45th week]]></title>
             <description><![CDATA[This post is an attempt to sum up all these things that happened last week in more public form. I mean, here are links for interesting things, funny gifs, my conclusions and other.]]></description>
