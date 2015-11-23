@@ -4,7 +4,7 @@
         <description><![CDATA[I'm developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 23 Nov 2015 20:03:44 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Nov 2015 20:10:23 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -14,6 +14,14 @@
         <category><![CDATA[design]]></category>
         <category><![CDATA[js]]></category>
         <category><![CDATA[javascript]]></category>
+        <item>
+            <title><![CDATA[47th week]]></title>
+            <description><![CDATA[Cool wiki-articles. Cool cover. Cool projects. Cool trip to Lviv. Take a look how I spent this week!]]></description>
+            <link>http://denysdovhan.com/47th-week</link>
+            <guid isPermaLink="true">http://denysdovhan.com/47th-week</guid>
+            <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
+            <pubDate>Mon, 23 Nov 2015 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[46th week]]></title>
             <description><![CDATA[Yet another week. So lets take a look at thing that happened with me for last week.]]></description>
