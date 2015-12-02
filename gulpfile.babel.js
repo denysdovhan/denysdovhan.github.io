@@ -12,7 +12,6 @@ import rss          from 'rss';
 import through      from 'through2';
 import deploy       from 'gulp-gh-pages';
 import sequence     from 'run-sequence';
-import assign       from 'object-assign';
 import moment       from 'moment';
 import each         from 'each-done';
 import express      from 'express';
@@ -29,7 +28,7 @@ let posts = [];
 const collect = () =>
   through.obj(
     (file, enc, cb) => {
-      posts.push(assign({
+      posts.push(Object.assign({
         filename: file.relative,
         url: path
               .basename(file.relative, path.extname(file.relative))
@@ -48,7 +47,7 @@ const collect = () =>
 // Page renderer
 const render = (layout, data, url) =>
   gulp.src(layout)
-    .pipe(put(assign({ site: pkg.site }, data)))
+    .pipe(put(Object.assign({ site: pkg.site }, data)))
     .pipe(jade({ pretty: true }))
     .pipe(rename({ dirname: url, basename: 'index' }))
     .pipe(gulp.dest('dist'));
