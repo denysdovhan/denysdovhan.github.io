@@ -30,7 +30,7 @@ const collect = () =>
     (file, enc, cb) => {
       posts.push(Object.assign({
         filename: file.relative,
-        url: path
+        url: '/' + path
               .basename(file.relative, path.extname(file.relative))
               .substr(11)
       }, extract(file.contents.toString(), 'D MMM YYYY', 'en')));
