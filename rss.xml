@@ -4,7 +4,7 @@
         <description><![CDATA[I'm developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 02 Dec 2015 19:29:41 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 04 Dec 2015 13:53:28 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -17,80 +17,80 @@
         <item>
             <title><![CDATA[48th week]]></title>
             <description><![CDATA[Nothing matter happened. You may not read this, because this week was so boring. This post mostly contains my github activity for this week and nothing else. No wiki, no news, no tweets.]]></description>
-            <link>http://denysdovhan.com/48th-week</link>
-            <guid isPermaLink="true">http://denysdovhan.com/48th-week</guid>
+            <link>http://denysdovhan.com//48th-week</link>
+            <guid isPermaLink="true">http://denysdovhan.com//48th-week</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Tue, 01 Dec 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[47th week]]></title>
             <description><![CDATA[Cool wiki-articles. Cool cover. Cool projects. Cool trip to Lviv. Take a look how I spent this week!]]></description>
-            <link>http://denysdovhan.com/47th-week</link>
-            <guid isPermaLink="true">http://denysdovhan.com/47th-week</guid>
+            <link>http://denysdovhan.com//47th-week</link>
+            <guid isPermaLink="true">http://denysdovhan.com//47th-week</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Mon, 23 Nov 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[46th week]]></title>
             <description><![CDATA[Yet another week. So lets take a look at thing that happened with me for last week.]]></description>
-            <link>http://denysdovhan.com/46-week</link>
-            <guid isPermaLink="true">http://denysdovhan.com/46-week</guid>
+            <link>http://denysdovhan.com//46-week</link>
+            <guid isPermaLink="true">http://denysdovhan.com//46-week</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Mon, 16 Nov 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[45th week]]></title>
             <description><![CDATA[This post is an attempt to sum up all these things that happened last week in more public form. I mean, here are links for interesting things, funny gifs, my conclusions and other.]]></description>
-            <link>http://denysdovhan.com/45-week</link>
-            <guid isPermaLink="true">http://denysdovhan.com/45-week</guid>
+            <link>http://denysdovhan.com//45-week</link>
+            <guid isPermaLink="true">http://denysdovhan.com//45-week</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Mon, 09 Nov 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[NodeSchool Chernivtsi #1]]></title>
             <description><![CDATA[Hi, everyone! Yesterday, we had our first NodeSchool event in Chernivtsi and it was amazing! I this post I'm gonna tell you about this…]]></description>
-            <link>http://denysdovhan.com/nodeschool-chernivtsi-1</link>
-            <guid isPermaLink="true">http://denysdovhan.com/nodeschool-chernivtsi-1</guid>
+            <link>http://denysdovhan.com//nodeschool-chernivtsi-1</link>
+            <guid isPermaLink="true">http://denysdovhan.com//nodeschool-chernivtsi-1</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Sun, 25 Oct 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Chernivtsi NodeSchool chapter established]]></title>
             <description><![CDATA[Hi, guys! Today I established NodeSchool chapter in Chernivtsi, Ukraine!]]></description>
-            <link>http://denysdovhan.com/chernivtsi-nodeschool-chapter</link>
-            <guid isPermaLink="true">http://denysdovhan.com/chernivtsi-nodeschool-chapter</guid>
+            <link>http://denysdovhan.com//chernivtsi-nodeschool-chapter</link>
+            <guid isPermaLink="true">http://denysdovhan.com//chernivtsi-nodeschool-chapter</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Wed, 30 Sep 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Web Space on the stage]]></title>
             <description><![CDATA[I published small video a week ago. This video about my new project with Codeguida called Web Space — that's the first Ukrainian screencasts about modern web-technologies.]]></description>
-            <link>http://denysdovhan.com/webspace-on-the-stage</link>
-            <guid isPermaLink="true">http://denysdovhan.com/webspace-on-the-stage</guid>
+            <link>http://denysdovhan.com//webspace-on-the-stage</link>
+            <guid isPermaLink="true">http://denysdovhan.com//webspace-on-the-stage</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Thu, 10 Sep 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Atom's One for GNOME Terminal is out]]></title>
             <description><![CDATA[One Dark Terminal]]></description>
-            <link>http://denysdovhan.com/gnome-terminal-one</link>
-            <guid isPermaLink="true">http://denysdovhan.com/gnome-terminal-one</guid>
+            <link>http://denysdovhan.com//gnome-terminal-one</link>
+            <guid isPermaLink="true">http://denysdovhan.com//gnome-terminal-one</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Sun, 23 Aug 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Building pull requests differently using Travis CI]]></title>
             <description><![CDATA[Sometimes you need to run differently tests for pull requests on Travis CI. In this post I'm going to explain how you can do this.]]></description>
-            <link>http://denysdovhan.com/building-pull-requests-using-travis</link>
-            <guid isPermaLink="true">http://denysdovhan.com/building-pull-requests-using-travis</guid>
+            <link>http://denysdovhan.com//building-pull-requests-using-travis</link>
+            <guid isPermaLink="true">http://denysdovhan.com//building-pull-requests-using-travis</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Wed, 19 Aug 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Hello, World! Again.]]></title>
             <description><![CDATA[Hi everyone! Today I proud to present my personal blog! Again.]]></description>
-            <link>http://denysdovhan.com/hello-world</link>
-            <guid isPermaLink="true">http://denysdovhan.com/hello-world</guid>
+            <link>http://denysdovhan.com//hello-world</link>
+            <guid isPermaLink="true">http://denysdovhan.com//hello-world</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Sat, 15 Aug 2015 00:00:00 GMT</pubDate>
         </item>
