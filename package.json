@@ -50,9 +50,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.5",
     "gulp-util": "^3.0.7",
+    "mdast": "^2.3.0",
+    "mdast-textr": "^1.0.0",
     "moment": "^2.10.6",
     "rss": "^1.1.1",
     "run-sequence": "^1.1.2",
-    "through2": "^2.0.0"
+    "through2": "^2.0.0",
+    "typographic-base": "^1.0.3"
   }
 }
