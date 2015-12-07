@@ -4,7 +4,7 @@
         <description><![CDATA[I'm developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 04 Dec 2015 13:53:28 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Dec 2015 20:43:22 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -48,7 +48,7 @@
         </item>
         <item>
             <title><![CDATA[NodeSchool Chernivtsi #1]]></title>
-            <description><![CDATA[Hi, everyone! Yesterday, we had our first NodeSchool event in Chernivtsi and it was amazing! I this post I'm gonna tell you about this…]]></description>
+            <description><![CDATA[Hi, everyone! Yesterday, we had our first NodeSchool event in Chernivtsi and it was amazing! I this post I’m gonna tell you about this…]]></description>
             <link>http://denysdovhan.com//nodeschool-chernivtsi-1</link>
             <guid isPermaLink="true">http://denysdovhan.com//nodeschool-chernivtsi-1</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
@@ -64,14 +64,14 @@
         </item>
         <item>
             <title><![CDATA[Web Space on the stage]]></title>
-            <description><![CDATA[I published small video a week ago. This video about my new project with Codeguida called Web Space — that's the first Ukrainian screencasts about modern web-technologies.]]></description>
+            <description><![CDATA[I published small video a week ago. This video about my new project with Codeguida called Web Space — that’s the first Ukrainian screencasts about modern web-technologies.]]></description>
             <link>http://denysdovhan.com//webspace-on-the-stage</link>
             <guid isPermaLink="true">http://denysdovhan.com//webspace-on-the-stage</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
             <pubDate>Thu, 10 Sep 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Atom's One for GNOME Terminal is out]]></title>
+            <title><![CDATA[Atom’s One for GNOME Terminal is out]]></title>
             <description><![CDATA[One Dark Terminal]]></description>
             <link>http://denysdovhan.com//gnome-terminal-one</link>
             <guid isPermaLink="true">http://denysdovhan.com//gnome-terminal-one</guid>
@@ -80,7 +80,7 @@
         </item>
         <item>
             <title><![CDATA[Building pull requests differently using Travis CI]]></title>
-            <description><![CDATA[Sometimes you need to run differently tests for pull requests on Travis CI. In this post I'm going to explain how you can do this.]]></description>
+            <description><![CDATA[Sometimes you need to run differently tests for pull requests on Travis CI. In this post I’m going to explain how you can do this.]]></description>
             <link>http://denysdovhan.com//building-pull-requests-using-travis</link>
             <guid isPermaLink="true">http://denysdovhan.com//building-pull-requests-using-travis</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>

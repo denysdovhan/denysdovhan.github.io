@@ -12,11 +12,11 @@
     <meta property="article:author" content="http://denysdovhan.com/">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@denysdovahn">
-    <meta property="description" content="Sometimes you need to run differently tests for pull requests on Travis CI. In this post I'm going to explain how you can do this.">
+    <meta property="description" content="Sometimes you need to run differently tests for pull requests on Travis CI. In this post I’m going to explain how you can do this.">
     <meta name="og:url" content="http://denysdovhan.com//building-pull-requests-using-travis">
     <meta name="og:image" content="http://i.imgur.com/SoBfEWG.png">
     <meta name="og:title" content="Building pull requests differently using Travis CI">
-    <meta name="og:description" content="Sometimes you need to run differently tests for pull requests on Travis CI. In this post I'm going to explain how you can do this.">
+    <meta name="og:description" content="Sometimes you need to run differently tests for pull requests on Travis CI. In this post I’m going to explain how you can do this.">
   </head>
   <body>
     <header class="site-header"><a href="/">
@@ -29,9 +29,9 @@
           <h1>Building pull requests differently using Travis CI</h1><span class="post-item__meta">
             <time>19 Aug 2015</time> — <a href="https://github.com/denysdovhan/denysdovhan.github.io/edit/premaster/posts/2015-08-19-building-pull-requests-using-travis.md">edit on github</a></span>
         </header>
-        <section class="post-item__content"><p>Sometimes you need to run differently tests for pull requests on <a href="https://travis-ci.org">Travis CI</a>. In this post I'm going to explain how you can do this.</p>
+        <section class="post-item__content"><p>Sometimes you need to run differently tests for pull requests on <a href="https://travis-ci.org">Travis CI</a>. In this post I’m going to explain how you can do this.</p>
 <!-- more -->
-<p>At first, you must should ensure «Build pull requests» option is enabled Travis' settings page:</p>
+<p>At first, you must should ensure «Build pull requests» option is enabled Travis’ settings page:</p>
 <p><img src="http://i.imgur.com/SoBfEWG.png" alt="Build pull requests" /></p>
 <p>If all right, let us try to add specific test for pull requests.</p>
 <h2>Restrictions when testing PR</h2>
@@ -40,7 +40,7 @@
 <pre><code class="language-yaml">script:
 - '[ &quot;${TRAVIS_PULL_REQUEST}&quot; = &quot;false&quot; ] &amp;&amp; npm test || npm run pull-test'
 </code></pre>
-<p>That's a bash condition that check if <code>${TRAVIS_PULL_REQUEST}</code> equals <code>false</code> and run different tasks depends on value.</p>
+<p>That’s a bash condition that check if <code>${TRAVIS_PULL_REQUEST}</code> equals <code>false</code> and run different tasks depends on value.</p>
 <h2>Conclusion</h2>
 <p>Use this when you wanna testing pull request in other way than regular branch. I use this approach for deploying this site after every commit and just test build for pull requests. <a href="https://github.com/denysdovhan/denysdovhan.github.io/blob/premaster/.travis.yml#L12">Check out</a> my <code>.travis.yml</code> for more.</p>
 
