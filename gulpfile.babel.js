@@ -13,6 +13,9 @@ import through      from 'through2';
 import deploy       from 'gulp-gh-pages';
 import sequence     from 'run-sequence';
 import moment       from 'moment';
+import mdast        from 'mdast';
+import mdtextr      from 'mdast-textr';
+import base         from 'typographic-base';
 import each         from 'each-done';
 import express      from 'express';
 
@@ -24,6 +27,12 @@ const perPage = 5;
 // Array of posts
 let posts = [];
 
+// Typographing
+const typo = input =>
+  mdast
+    .use(mdtextr, { plugins: [ base ], options: { locale: 'en-us' } })
+    .process(input);
+
 // Function that collects all posts
 const collect = () =>
   through.obj(
@@ -33,7 +42,7 @@ const collect = () =>
         url: '/' + path
               .basename(file.relative, path.extname(file.relative))
               .substr(11)
-      }, extract(file.contents.toString(), 'D MMM YYYY', 'en')));
+      }, extract(typo(file.contents.toString()), 'D MMM YYYY', 'en')));
       cb(null, false);
     },
     (cb) => {
