@@ -122,14 +122,14 @@ gulp.task('rss', ['index'], () => {
 });
 
 // Put CNAME file into dist
-gulp.task('cname', () => gulp.src('CNAME').pipe(gulp.dest('dist')));
+gulp.task('copy', () => gulp.src('{CNAME,favicon*}').pipe(gulp.dest('dist')));
 
 // Clean dist
 gulp.task('clean', (cb) => del(['dist'], cb));
 
 // Build task
 gulp.task('build', (cb) =>
-  sequence('clean', ['posts', 'index', 'rss', 'styles', 'cname'], cb)
+  sequence('clean', ['posts', 'index', 'rss', 'styles', 'copy'], cb)
 );
 
 // Deploy task
