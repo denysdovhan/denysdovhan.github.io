@@ -12,6 +12,8 @@ I'm very grateful to [Jorge Bucaran](https://github.com/bucaran) and [Andrey Pol
 
 ![Update notifier](https://cloud.githubusercontent.com/assets/8956796/12447240/dd34c4d0-bf7f-11e5-862c-bfb033e2b6cc.png)
 
-Thanks everyone, who think it’s useful and everyone, who have made this book better! 
+Thanks everyone, who think it’s useful and everyone, who have made this book better!
+
+**P.S:** I'm gonna use this book in next NodeSchool Chernivtsi meet-up, so currently I'm working on [learnyoubash](https://github.com/denysdovhan/learnyoubash) interactive workshopper, which will be based on this book. Click «Watching» to keep in touch.
 
 [bash-handbook]: https://github.com/denysdovhan/bash-handbook
