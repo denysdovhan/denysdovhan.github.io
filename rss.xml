@@ -4,7 +4,7 @@
         <description><![CDATA[I'm developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 22 Jan 2016 17:18:01 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 22 Jan 2016 17:21:12 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -14,14 +14,6 @@
         <category><![CDATA[design]]></category>
         <category><![CDATA[js]]></category>
         <category><![CDATA[javascript]]></category>
-        <item>
-            <title><![CDATA[bash-handbook got 200 ★’s on GitHub]]></title>
-            <description><![CDATA[About month ago, in New Year night, I started to write my first handbook — the bash-handbook.]]></description>
-            <link>http://denysdovhan.com//bash-handbook</link>
-            <guid isPermaLink="true">http://denysdovhan.com//bash-handbook</guid>
-            <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
-            <pubDate>Fri, 22 Jan 2016 00:00:00 GMT</pubDate>
-        </item>
         <item>
             <title><![CDATA[48th week]]></title>
             <description><![CDATA[Nothing matter happened. You may not read this, because this week was so boring. This post mostly contains my github activity for this week and nothing else. No wiki, no news, no tweets.]]></description>
