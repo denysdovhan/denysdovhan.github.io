@@ -13,8 +13,8 @@ import through      from 'through2';
 import deploy       from 'gulp-gh-pages';
 import sequence     from 'run-sequence';
 import moment       from 'moment';
-import mdast        from 'mdast';
-import mdtextr      from 'mdast-textr';
+import remark       from 'remark';
+import textr        from 'remark-textr';
 import base         from 'typographic-base';
 import each         from 'each-done';
 import express      from 'express';
@@ -29,8 +29,8 @@ let posts = [];
 
 // Typographing
 const typo = input =>
-  mdast
-    .use(mdtextr, { plugins: [ base ], options: { locale: 'en-us' } })
+  remark
+    .use(textr, { plugins: [ base ], options: { locale: 'en-us' } })
     .process(input);
 
 // Function that collects all posts
