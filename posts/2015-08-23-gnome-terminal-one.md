@@ -1,6 +1,6 @@
 # Atom's One for GNOME Terminal is out
 
-23 Aug 2015
+_23 Aug 2015_
 
 [![One Dark Terminal](http://i.imgur.com/O0VJ00Z.png)][gnome-terminal-one]
 

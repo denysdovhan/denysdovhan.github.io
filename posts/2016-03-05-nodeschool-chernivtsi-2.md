@@ -1,6 +1,6 @@
 # NodeSchool Chernivtsi #2
 
-_5 March 2016_
+_5 Mar 2016_
 
 A week ago we had our second **NodeSchool** event in Chernivtsi! In this post I'm gonna tell you how it was, what was better and what was worse.
 
@@ -21,7 +21,7 @@ Another one workshopper was a [regex-adventure](regex-adventure).
 
 The second event were not so popular than previous one. I have no idea why, but there were about 40-50 people. Partially, it was even better, because it was very comfortable and relaxed to members.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">That was great. Thanks <a href="https://twitter.com/denysdovhan">@denysdovhan</a> . <a href="https://twitter.com/hashtag/nodeschool?src=hash">#nodeschool</a></p>&mdash; Jester Sunborn (@JesterSunborn) <a href="https://twitter.com/JesterSunborn/status/703621100320718848">February 27, 2016</a></blockquote>
+<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">That was great. Thanks <a href="https://twitter.com/denysdovhan">@denysdovhan</a> . <a href="https://twitter.com/hashtag/nodeschool?src=hash">#nodeschool</a></p>&mdash; Jester Sunborn (@JesterSunborn) <a href="https://twitter.com/JesterSunborn/status/703621100320718848">February 27, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I'm very grateful to everyone who had come. I hope you spent your time with benefits for you. Se you soon on the next event!

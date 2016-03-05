@@ -1,6 +1,6 @@
 # Web Space on the stage
 
-10 Sep 2015
+_10 Sep 2015_
 
 I published small video a week ago. This video about my new project with [Codeguida][codeguida] called [Web Space][webspace] — that's the first Ukrainian screencasts about modern web-technologies.
 
