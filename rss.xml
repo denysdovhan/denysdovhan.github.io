@@ -4,7 +4,7 @@
         <description><![CDATA[I'm a developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 10 Mar 2016 10:19:18 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 15 Mar 2016 13:44:52 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -16,7 +16,7 @@
         <category><![CDATA[javascript]]></category>
         <item>
             <title><![CDATA[Why I use Atom instead of X]]></title>
-            <description><![CDATA[Many people ask me: “Why do you prefer Atom instead of Sublime Text? Why did you switch your primary text editor?” And every time I have to explain these reasons, again and again. That’s why I’m writing this post.]]></description>
+            <description><![CDATA[Many people ask me: “Why do you prefer Atom instead of Sublime Text? Why did you switch your primary text editor?” And I have to explain these reasons, again and again, every time. That’s why I’m writing this post.]]></description>
             <link>http://denysdovhan.com//atom-vs-x</link>
             <guid isPermaLink="true">http://denysdovhan.com//atom-vs-x</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
