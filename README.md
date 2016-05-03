@@ -6,9 +6,9 @@ Here is my blog about front-end technologies, design, JavaScript, HTML/CSS, etc.
 
 * It's _open source_ — so you can improve this and fix mistakes.
 * It's _static_ — so it's convenient for me, superfast and hosted on [GitHub Pages][gh-pages].
-* It's _habitual_ — 'cause build using familiar tools, like Gulp, Jade, Markkdown and Travis.
+* It's _habitual_ — 'cause build using familiar tools, like Gulp, Jade, Markdown and Travis.
 
-## Instalation
+## Installation
 
 If you want fix mistakes or propose changes, you can clone this repo and install dependencies using following command:
 
