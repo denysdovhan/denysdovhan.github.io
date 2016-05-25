@@ -27,7 +27,7 @@
       <article class="post-item">
         <header class="post-item__header">
           <h1>Hello, World! Again.</h1><span class="post-item__meta">
-            <time>15 Aug 2015</time> — <a href="https://github.com/denysdovhan/denysdovhan.github.io/edit/premaster/posts/2015-08-15-hello-world.md">edit on github</a></span>
+            <time>15 Aug 2015</time> —<a href="https://github.com/denysdovhan/denysdovhan.github.io/edit/premaster/posts/#{post.filename}">edit on github</a></span>
         </header>
         <section class="post-item__content"><p>Hi everyone! Today I proud to present my personal blog! Again.</p>
 <p>Yep, that’s right. You heard correctly. This isn’t the first time when I present my blog. But today it is going to be special.</p>
@@ -64,11 +64,12 @@
         </section>
       </article>
     </main>
-    <footer class="site-footer">(͠◉_◉᷅ )<br>If you think «Hello, World! Again.» is awesome, please <a href="/rss.xml" target="_blank">subscribe to RSS</a>, share it to you <a href="https://twitter.com/intent/tweet?url=http://denysdovhan.com//hello-world&amp;text=Hello, World! Again.&amp;via=denysdovhan" target="_blank">followers in Twitter</a> and <a href="https://www.facebook.com/sharer.php?u=http://denysdovhan.com//hello-world&amp;t=Hello, World! Again." target="_blank">friends in Facebook</a></footer>
+    <footer class="site-footer">(͠◉_◉᷅ )<br>If you think «Hello, World! Again.» is awesome, please<a href="/rss.xml" target="_blank">subscribe to RSS</a>, share it to you<a href="https://twitter.com/intent/tweet?url=http://denysdovhan.com/#{post.url}&amp;text=#{post.title.text}&amp;via=denysdovhan" target="_blank">followers in Twitter</a> and <a href="https://www.facebook.com/sharer.php?u=http://denysdovhan.com/#{post.url}&amp;t=#{post.title.text}" target="_blank">friends in Facebook</a>
+    </footer>
     <!-- Yandex.Metrika counter-->
     <script>(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter31974766 = new Ya.Metrika({ id:31974766, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
     <noscript>
-      <div><img src="https://mc.yandex.ru/watch/31974766" style="position:absolute; left:-9999px;" alt=""></div>
+      <div><img src="https://mc.yandex.ru/watch/31974766" style="position:absolute; left:-9999px" alt=""></div>
     </noscript>
     <!-- Google Analytics-->
     <script>
