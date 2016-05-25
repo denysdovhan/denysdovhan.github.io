@@ -4,7 +4,7 @@
         <description><![CDATA[I'm a developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 25 May 2016 11:42:52 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 25 May 2016 12:10:38 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -15,7 +15,7 @@
         <category><![CDATA[js]]></category>
         <category><![CDATA[javascript]]></category>
         <item>
-            <title><![CDATA[Why I use Atom instead of X]]></title>
+            <title><![CDATA[Why I use Atom instead of X]]></title>
             <description><![CDATA[Many people ask me: “Why do you prefer Atom instead of Sublime Text? Why did you switch your primary text editor?” And I have to explain these reasons, again and again, every time. That’s why I’m writing this post.]]></description>
             <link>http://denysdovhan.com//atom-vs-x</link>
             <guid isPermaLink="true">http://denysdovhan.com//atom-vs-x</guid>
@@ -23,7 +23,7 @@
             <pubDate>Tue, 08 Mar 2016 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[NodeSchool Chernivtsi #2]]></title>
+            <title><![CDATA[NodeSchool Chernivtsi #2]]></title>
             <description><![CDATA[A week ago we had our second NodeSchool event in Chernivtsi! In this post I’m gonna tell you how it was, what was better and what was worse.]]></description>
             <link>http://denysdovhan.com//nodeschool-chernivtsi-2</link>
             <guid isPermaLink="true">http://denysdovhan.com//nodeschool-chernivtsi-2</guid>
@@ -31,7 +31,7 @@
             <pubDate>Sat, 05 Mar 2016 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[bash-handbook got 200 ★’s on GitHub]]></title>
+            <title><![CDATA[bash-handbook got 200 ★’s on GitHub]]></title>
             <description><![CDATA[About month ago, in New Year night, I started to write my first handbook — the bash-handbook.]]></description>
             <link>http://denysdovhan.com//bash-handbook-200-starts</link>
             <guid isPermaLink="true">http://denysdovhan.com//bash-handbook-200-starts</guid>
@@ -71,7 +71,7 @@
             <pubDate>Mon, 09 Nov 2015 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[NodeSchool Chernivtsi #1]]></title>
+            <title><![CDATA[NodeSchool Chernivtsi #1]]></title>
             <description><![CDATA[Hi, everyone! Yesterday, we had our first NodeSchool event in Chernivtsi and it was amazing! I this post I’m gonna tell you about this…]]></description>
             <link>http://denysdovhan.com//nodeschool-chernivtsi-1</link>
             <guid isPermaLink="true">http://denysdovhan.com//nodeschool-chernivtsi-1</guid>
