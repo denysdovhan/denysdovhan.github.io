@@ -1,25 +1,24 @@
-import gulp         from 'gulp';
-import { log }      from 'gulp-util';
-import jade         from 'gulp-jade';
-import put          from 'gulp-data';
-import rename       from 'gulp-rename';
-import stylus       from 'gulp-stylus';
-import extract      from 'article-data';
-import fs           from 'fs';
-import path         from 'path';
-import del          from 'del';
-import rss          from 'rss';
-import through      from 'through2';
-import deploy       from 'gulp-gh-pages';
-import sequence     from 'run-sequence';
-import moment       from 'moment';
-import remark       from 'remark';
-import textr        from 'remark-textr';
-import base         from 'typographic-base';
-import each         from 'each-done';
-import express      from 'express';
+const gulp     = require('gulp');
+const jade     = require('gulp-jade');
+const put      = require('gulp-data');
+const rename   = require('gulp-rename');
+const stylus   = require('gulp-stylus');
+const extract  = require('article-data');
+const fs       = require('fs');
+const path     = require('path');
+const del      = require('del');
+const rss      = require('rss');
+const through  = require('through2');
+const deploy   = require('gulp-gh-pages');
+const moment   = require('moment');
+const remark   = require('remark');
+const textr    = require('remark-textr');
+const base     = require('typographic-base');
+const each     = require('each-done');
+const BS       = require('browser-sync');
 
-import pkg          from './package';
+const pkg         = require('./package');
+const browserSync = BS.create();
 
 // Amount of posts on page
 const perPage = 5;
@@ -42,7 +41,10 @@ const collect = () =>
         url: '/' + path
               .basename(file.relative, path.extname(file.relative))
               .substr(11)
-      }, extract(typo(file.contents.toString()), 'D MMM YYYY', 'en')));
+      }, extract(
+        typo(file.contents.toString()),
+        'D MMM YYYY', 'en'
+      )));
       cb(null, false);
     },
     (cb) => {
@@ -69,12 +71,12 @@ gulp.task('collect', () => {
 });
 
 // Render all posts
-gulp.task('posts', ['collect'], (cb) => {
+gulp.task('posts', (cb) => {
   each(posts, post => render('layout/post.jade', { post }, post.url), cb);
 });
 
 // Render index page
-gulp.task('index', ['collect'], () => {
+gulp.task('index', () => {
   let promises = [];
   let onPage = [];
   let page = 1;
@@ -106,10 +108,11 @@ gulp.task('styles', () =>
   gulp.src('styles/main.styl')
     .pipe(stylus())
     .pipe(gulp.dest('dist/styles'))
+    .pipe(browserSync.stream())
 );
 
 // Create RSS
-gulp.task('rss', ['index'], () => {
+gulp.task('rss', (cb) => {
   const site = pkg.site;
   let feed = new rss(pkg.site);
 
@@ -127,6 +130,7 @@ gulp.task('rss', ['index'], () => {
 
   fs.writeFile('dist/rss.xml', xml, { encoding: 'utf-8' }, (err) => {
     if (err) { throw err; }
+    cb();
   });
 });
 
@@ -136,32 +140,47 @@ gulp.task('copy', () => gulp.src('{CNAME,favicon*}').pipe(gulp.dest('dist')));
 // Clean dist
 gulp.task('clean', (cb) => del(['dist'], cb));
 
+// Render layout
+gulp.task('layout', gulp.series(
+  'collect',
+  gulp.parallel('posts', 'index')
+));
+
 // Build task
-gulp.task('build', (cb) =>
-  sequence('clean', ['posts', 'index', 'rss', 'styles', 'copy'], cb)
-);
+gulp.task('build', gulp.series(
+  'clean',
+  'layout',
+  'rss',
+  gulp.parallel('styles', 'copy')
+));
 
 // Deploy task
-gulp.task('deploy', ['build'], () =>
+gulp.task('deploy', gulp.series('build', () =>
   gulp.src('dist/**/*')
     .pipe(deploy({
       branch: 'master',
       push: true,
       message: `Update ${moment(new Date()).format('lll')}`
     }))
-);
+));
 
 // Watch task
-gulp.task('watch', ['build', 'server'], () => {
+gulp.task('watch', () => {
+  browserSync.init({
+    server: 'dist'
+  });
   // watch changes in styles, layout and posts
-  gulp.watch(['styles/**/*'], ['styles']);
-  gulp.watch(['**/*.{jade,md,json}'], ['posts', 'index', 'rss']);
+  gulp.watch('styles/**/*', gulp.series('styles'));
+  gulp.watch('**/*.{jade,md,json}', gulp.series('layout', 'rss'));
+
+  browserSync.watch('dist/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('server', () => {
-  express().use(express.static('dist')).listen(4000);
-  log('Server is running on http://localhost:4000');
-});
+// Run server
+gulp.task('serve', gulp.series(
+  'build',
+  'watch'
+));
 
 // Default task
-gulp.task('default', ['watch']);
+gulp.task('default', gulp.series('serve'));

@@ -22,8 +22,8 @@ Also don't forget that you can easily download it and read offline.
 
 I've mentioned that this site has builded using Gulp, so you could use these common tasks:
 
-* `gulp` — alias for `gulp watch`.
-* `gulp watch` — build and run local server with live-reload.
+* `gulp` — alias for `gulp serve`.
+* `gulp serve` — build and run local server with live-reload.
 * `gulp build` — build site into `dist/` folder.
 * `gulp deploy` — rebuild `master` using `dist/` and push to `origin`.
 
@@ -35,11 +35,12 @@ Also there are these specified tasks:
 * `gulp styles` — render styles from `styles/`.
 * `gulp rss` — render feed using `posts` variable.
 * `gulp cname` — just put `CNAME` file into `dist` folder.
+* `gulp watch` — watch for changes in `dist`.
 * `gulp clean` — clear `dist/` folder.
 
 And of course look at **npm**-scripts:
 
-* `npm start` — alias for `gulp watch`
+* `npm start` — alias for `gulp`
 * `npm build` — alias for `gulp build`
 * `npm deploy` — alias for `gulp deploy`
 
