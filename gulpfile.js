@@ -1,5 +1,5 @@
 const gulp     = require('gulp');
-const jade     = require('gulp-jade');
+const pug      = require('gulp-pug');
 const put      = require('gulp-data');
 const rename   = require('gulp-rename');
 const stylus   = require('gulp-stylus');
@@ -59,7 +59,7 @@ const collect = () =>
 const render = (layout, data, url) =>
   gulp.src(layout)
     .pipe(put(Object.assign({ site: pkg.site }, data)))
-    .pipe(jade({ pretty: true }))
+    .pipe(pug({ pretty: true }))
     .pipe(rename({ dirname: url, basename: 'index' }))
     .pipe(gulp.dest('dist'));
 
@@ -72,7 +72,7 @@ gulp.task('collect', () => {
 
 // Render all posts
 gulp.task('posts', (cb) => {
-  each(posts, post => render('layout/post.jade', { post }, post.url), cb);
+  each(posts, post => render('layout/post.pug', { post }, post.url), cb);
 });
 
 // Render index page
@@ -87,7 +87,7 @@ gulp.task('index', () => {
 
     if (i % perPage == 0 || i == posts.length) {
       promises.push(new Promise((resolve, reject) => {
-        render('layout/index.jade', {
+        render('layout/index.pug', {
           posts: onPage,
           prevPage: page-1 != 0 ? (page-1 == 1) ? '/':`/page/${page-1}` : false,
           nextPage: page*perPage < posts.length ?     `/page/${page+1}` : false
