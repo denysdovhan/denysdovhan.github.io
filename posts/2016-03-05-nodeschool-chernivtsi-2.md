@@ -1,4 +1,4 @@
-# NodeSchool Chernivtsi #2
+# NodeSchool Chernivtsi #2
 
 _5 Mar 2016_
 

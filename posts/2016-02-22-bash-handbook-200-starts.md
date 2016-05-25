@@ -1,4 +1,4 @@
-# bash-handbook got 200 ★’s on GitHub
+# bash-handbook got 200 ★’s on GitHub
 
 _22 Jan 2016_
 
