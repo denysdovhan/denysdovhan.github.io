@@ -50,6 +50,8 @@ const collect = () =>
     (cb) => {
       posts = posts
         .filter(x => !!x.date)
+        .filter(x => !!x.title)
+        .filter(x => !!x.desc)
         .sort((a,b) => b.date.unix - a.date.unix);
       cb();
     }
