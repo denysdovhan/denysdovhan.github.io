@@ -1,4 +1,5 @@
 const gulp     = require('gulp');
+const plumber  = require('gulp-plumber');
 const pug      = require('gulp-pug');
 const put      = require('gulp-data');
 const rename   = require('gulp-rename');
@@ -60,6 +61,7 @@ const collect = () =>
 // Page renderer
 const render = (layout, data, url) =>
   gulp.src(layout)
+    .pipe(plumber())
     .pipe(put(Object.assign({ site: pkg.site }, data)))
     .pipe(pug({ pretty: true }))
     .pipe(rename({ dirname: url, basename: 'index' }))
@@ -108,6 +110,7 @@ gulp.task('index', () => {
 // Render styles
 gulp.task('styles', () =>
   gulp.src('styles/main.styl')
+    .pipe(plumber())
     .pipe(stylus())
     .pipe(gulp.dest('dist/styles'))
     .pipe(browserSync.stream())
