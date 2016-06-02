@@ -3,6 +3,10 @@ extend layout
 block title
   title= site.title
 
+block meta
+  meta(property="og:image", content='https://github.com/denysdovhan.png')
+  meta(name='twitter:image', content='https://github.com/denysdovhan.png')
+
 block content
   each post in posts
     article.post-item
