@@ -32,19 +32,22 @@ h4 {
 }
 h1 {
   margin-top: 0;
-  font-size: 3.157rem;
+  font-size: 2.074rem;
 }
 h2 {
-  font-size: 2.369rem;
+  font-size: 1.728rem;
 }
 h3 {
-  font-size: 1.777rem;
+  font-size: 1.44em;
 }
 h4 {
-  font-size: 1.333rem;
+  font-size: 1.2rem;
 }
 small {
   font-size: 0.75rem;
+}
+p {
+  margin-bottom: 1.3em;
 }
 a {
   color: inherit;
@@ -82,10 +85,6 @@ a:hover {
   display: block;
   text-align: center;
   margin-bottom: 1rem;
-}
-.post-item__header h1 {
-  font-size: 2.369rem;
-  letter-spacing: -1px;
 }
 .post-item__meta {
   font-family: serif;
