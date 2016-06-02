@@ -176,7 +176,7 @@ gulp.task('watch', () => {
   });
   // watch changes in styles, layout and posts
   gulp.watch('styles/**/*', gulp.series('styles'));
-  gulp.watch('**/*.{jade,md,json}', gulp.series('layout', 'rss'));
+  gulp.watch('**/*.{pug,md,json}', gulp.series('layout', 'rss'));
 
   browserSync.watch('dist/**/*.*').on('change', browserSync.reload);
 });
