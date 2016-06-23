@@ -13,12 +13,12 @@
     <meta property="article:author" content="http://denysdovhan.com/">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@denysdovahn">
-    <meta property="description" content="Curently, I’m working on simple React/Redux application. I have Webpack bundler with hot reloading and some dependencies. At this point, debugging of this application bacame a little bit hard to understand.">
+    <meta property="description" content="Curently, I’m working on simple React/Redux application. I have Webpack bundler with hot reloading and some dependencies. At this point, debugging of this application became a little bit hard to understand.">
     <meta name="og:url" content="http://denysdovhan.com//blackboxing-react">
     <meta name="og:image" content="http://i.imgur.com/nO0MwnK.png">
     <meta name="twitter:image" content="http://i.imgur.com/nO0MwnK.png">
     <meta name="og:title" content="Blackboxing in Chrome DevTools">
-    <meta name="og:description" content="Curently, I’m working on simple React/Redux application. I have Webpack bundler with hot reloading and some dependencies. At this point, debugging of this application bacame a little bit hard to understand.">
+    <meta name="og:description" content="Curently, I’m working on simple React/Redux application. I have Webpack bundler with hot reloading and some dependencies. At this point, debugging of this application became a little bit hard to understand.">
   </head>
   <body>
     <header class="site-header"><a href="/">
@@ -31,7 +31,7 @@
           <h1>Blackboxing in Chrome DevTools</h1><span class="post-item__meta">
             <time>22 Jun 2016</time> —<a href="https://github.com/denysdovhan/denysdovhan.github.io/edit/premaster/posts/#{post.filename}">edit on github</a></span>
         </header>
-        <section class="post-item__content"><p>Curently, I’m working on simple React/Redux application. I have Webpack bundler with hot reloading and some dependencies. At this point, debugging of this application bacame a little bit hard to understand.</p>
+        <section class="post-item__content"><p>Curently, I’m working on simple React/Redux application. I have Webpack bundler with hot reloading and some dependencies. At this point, debugging of this application became a little bit hard to understand.</p>
 <p>I mean, when you are debugging such applications almost in every case you will jump stack into a source code of a library you use (in my case it’s React). If you’re using hot module replacement, then you go through the logic of HMR. That’s not okay. We don’t want to travel these Nine circles of Hell.</p>
 <p>You’re happy man if you use Chrome DevTools (if you don’t, you <a href="https://developers.google.com/web/tools/chrome-devtools/">definitely should try</a>). There is a cool feature called <em>“Blackboxing”</em>. Blackboxing gives you a way to denote library code so that the debugger can route around it. When you blackbox a source file, the debugger will not jump into that file when stepping through code you’re debugging.</p>
 <p>There is a <a href="https://developer.chrome.com/devtools/docs/blackboxing">cool article about blackboxing on Chrome Developer Tools site</a>. It’s easy to right-click on the file that want to blackbox, but we coudn’t do this if our script on the development server, or bundled with Webpack. The solution for me is to make a pattern of files which must be blackboxed.</p>
@@ -46,8 +46,8 @@
 <p>Pesonally, I use these patterns:</p>
 <ul>
 <li><code>\.min\.js$</code> — for all minified sources</li>
-<li><code>node_modules</code> and <code>bower_component</code> — for dependencies</li>
-<li><code>~</code> — home for dependecies in Webpack bundle</li>
+<li><code>node_modules</code> and <code>bower_components</code> — for dependencies</li>
+<li><code>~</code> — home for dependencies in Webpack bundle</li>
 <li><code>bundle.js</code> — it’s a bundle itself (we use sourcemaps, don’t we?)</li>
 <li><code>\(webpack\)-hot-middleware</code> — HMR</li>
 </ul>
