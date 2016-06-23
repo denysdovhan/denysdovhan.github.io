@@ -2,7 +2,7 @@
 
 _22 Jun 2016_
 
-Curently, I'm working on simple React/Redux application. I have Webpack bundler with hot reloading and some dependencies. At this point, debugging of this application bacame a little bit hard to understand.
+Curently, I'm working on simple React/Redux application. I have Webpack bundler with hot reloading and some dependencies. At this point, debugging of this application became a little bit hard to understand.
 
 I mean, when you are debugging such applications almost in every case you will jump stack into a source code of a library you use (in my case it's React). If you're using hot module replacement, then you go through the logic of HMR. That's not okay. We don't want to travel these Nine circles of Hell.
 
@@ -23,8 +23,8 @@ Here we can define scripts that you would like to add to the blacklist in couple
 Pesonally, I use these patterns:
 
 * `\.min\.js$` — for all minified sources
-* `node_modules` and `bower_component` — for dependencies
-* `~` — home for dependecies in Webpack bundle
+* `node_modules` and `bower_components` — for dependencies
+* `~` — home for dependencies in Webpack bundle
 * `bundle.js` — it's a bundle itself (we use sourcemaps, don't we?)
 * `\(webpack\)-hot-middleware` — HMR
 
