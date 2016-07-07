@@ -20,7 +20,7 @@ Thus I decided to use One Dark theme in terminal too. Unfortunately, there isn't
 
 These themes use [color palette][palette] from original One syntax theme.
 
-## Instalation
+## Installation
 
 For installation just execute desired command below. Be careful, terminal will be closed after install.
 
