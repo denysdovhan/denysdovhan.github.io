@@ -29,9 +29,10 @@ let posts = [];
 
 // Typographing
 const typo = input =>
-  remark
+  remark()
     .use(textr, { plugins: [ base ], options: { locale: 'en-us' } })
-    .process(input);
+    .process(input)
+    .toString();
 
 // Function that collects all posts
 const collect = () =>
