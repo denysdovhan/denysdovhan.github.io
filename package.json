@@ -38,7 +38,7 @@
   "devDependencies": {},
   "dependencies": {
     "article-data": "^0.3.1",
-    "browser-sync": "^2.12.8",
+    "browser-sync": "^2.15.0",
     "del": "^2.2.0",
     "each-done": "^1.0.0",
     "express": "^4.13.3",
