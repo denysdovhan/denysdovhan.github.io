@@ -4,7 +4,7 @@
         <description><![CDATA[I'm a developer • Student • Speaker • Author • Guitar player • Open Source addict]]></description>
         <link>http://denysdovhan.com/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 28 Sep 2016 18:41:06 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 09 Oct 2016 16:27:49 GMT</lastBuildDate>
         <atom:link href="http://denysdovhan.com/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -14,6 +14,14 @@
         <category><![CDATA[design]]></category>
         <category><![CDATA[js]]></category>
         <category><![CDATA[javascript]]></category>
+        <item>
+            <title><![CDATA[NodeSchool Chernivtsi #3]]></title>
+            <description><![CDATA[Yesterday we had third NodeSchool event in Chernivtsi! So it’s time to summary up everything.]]></description>
+            <link>http://denysdovhan.com//nodeschool-chernivtsi-3</link>
+            <guid isPermaLink="true">http://denysdovhan.com//nodeschool-chernivtsi-3</guid>
+            <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
+            <pubDate>Sun, 09 Oct 2016 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Blackboxing in Chrome DevTools]]></title>
             <description><![CDATA[Curently, I’m working on simple React/Redux application. I have Webpack bundler with hot reloading and some dependencies. At this point, debugging of this application became a little bit hard to understand.]]></description>
