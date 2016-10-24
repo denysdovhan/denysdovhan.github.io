@@ -49,7 +49,7 @@
     "gulp-pug": "^3.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.5",
-    "moment": "^2.10.6",
+    "moment": "^2.15.2",
     "remark": "^6.0.1",
     "remark-textr": "^2.0.0",
     "rss": "^1.1.1",
