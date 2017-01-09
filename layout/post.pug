@@ -23,7 +23,7 @@ block content
       span.post-item__meta
         time= post.date.text
         |  —
-        a(href='https://github.com/denysdovhan/denysdovhan.github.io/edit/premaster/posts/#{post.filename}') edit on github
+        a(href='https://github.com/denysdovhan/denysdovhan.github.io/edit/premaster/posts/' + post.filename) edit on github
     section.post-item__content
       != post.content.html
 
