@@ -52,7 +52,7 @@
     "moment": "^2.10.6",
     "remark": "^6.0.1",
     "remark-textr": "^2.0.0",
-    "rss": "^1.1.1",
+    "rss": "^1.2.2",
     "run-sequence": "^1.1.2",
     "through2": "^2.0.0",
     "typographic-base": "^1.0.3"
