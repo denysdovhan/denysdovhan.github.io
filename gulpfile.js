@@ -31,7 +31,7 @@ let posts = [];
 const typo = input =>
   remark()
     .use(textr, { plugins: [ base ], options: { locale: 'en-us' } })
-    .process(input)
+    .processSync(input)
     .toString();
 
 // Function that collects all posts
