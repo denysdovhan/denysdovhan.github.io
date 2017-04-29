@@ -50,7 +50,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.5",
     "moment": "^2.10.6",
-    "remark": "^7.0.0",
+    "remark": "^7.0.1",
     "remark-textr": "^3.0.0",
     "rss": "^1.1.1",
     "run-sequence": "^1.1.2",
